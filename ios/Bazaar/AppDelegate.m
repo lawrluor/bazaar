@@ -34,4 +34,14 @@
   return YES;
 }
 
+// add this line before @implementation AppDelegate
+#import <RNGoogleSignin/RNGoogleSignin.h>
+
+// add this method before @end
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+  
+  return [RNGoogleSignin application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
+}
+
 @end

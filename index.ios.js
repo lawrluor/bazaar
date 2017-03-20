@@ -12,11 +12,14 @@ import {
   Text,
   View,
   Navigator,
+  Image,
   TouchableHighlight
 } from 'react-native';
 
 // import Main from './main'
-import Items from './items'
+import Items from './items';
+
+import LoginButtons from './LoginButtons';
 
 var Bazaar = React.createClass({
   renderScene(route, navigator) {
@@ -47,9 +50,16 @@ var Main = React.createClass({
       }
     })
   },
-  render() {    
+  render() {
     return (
       <View style={ styles.container }>
+        <View>
+          <Image style={styles.imageLogo} source={require('./img/logo.png')}/>
+          <Text style={styles.titleBazaar}>Bazaar</Text>
+        </View>
+
+        <LoginButtons/>
+
         <Text style={ styles.heading }>Main Scene</Text>
         <TouchableHighlight style={ styles.button } onPress={ () => this._navigate() }>
           <Text style={ styles.buttonText }>GO to Items</Text>
@@ -61,15 +71,24 @@ var Main = React.createClass({
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#960819'
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#960819'
     },
   title: {
-    fontSize: 50,
-    backgroundColor: '#FFFFFF'
-  }
+      fontSize: 50,
+      backgroundColor: '#FFFFFF'
+  },
+  titleBazaar: {
+    color: '#FFFFFF',
+    fontSize: 60,
+    fontFamily: 'Futura',
+    marginBottom:50,
+  },
+  imageLogo: {
+    margin: 20
+  },
 })
 
 AppRegistry.registerComponent('Bazaar', () => Bazaar);

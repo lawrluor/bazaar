@@ -13,6 +13,35 @@
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
 		00E356F31AD99517003FC87E /* BazaarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BazaarTests.m */; };
+		0BA10EB91E805C8300CFA4BF /* FirebaseAnalytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EB81E805C8300CFA4BF /* FirebaseAnalytics.framework */; };
+		0BA10EBB1E805C9600CFA4BF /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EBA1E805C9600CFA4BF /* FirebaseCore.framework */; };
+		0BA10EBD1E805CA800CFA4BF /* FirebaseInstanceID.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EBC1E805CA800CFA4BF /* FirebaseInstanceID.framework */; };
+		0BA10EC01E805CBB00CFA4BF /* GGLCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EBE1E805CBB00CFA4BF /* GGLCore.framework */; };
+		0BA10EC11E805CBB00CFA4BF /* GGLSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EBF1E805CBB00CFA4BF /* GGLSignIn.framework */; };
+		0BA10EC31E805CC800CFA4BF /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EC21E805CC800CFA4BF /* GoogleSignIn.framework */; };
+		0BA10EC81E805D8600CFA4BF /* GTMOAuth2Authentication.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EC61E805D8600CFA4BF /* GTMOAuth2Authentication.h */; };
+		0BA10EC91E805D8600CFA4BF /* GTMOAuth2SignIn.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EC71E805D8600CFA4BF /* GTMOAuth2SignIn.h */; };
+		0BA10ECC1E805DCC00CFA4BF /* GTMOAuth2Authentication.m in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ECA1E805DCC00CFA4BF /* GTMOAuth2Authentication.m */; };
+		0BA10ECD1E805DCC00CFA4BF /* GTMOAuth2SignIn.m in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ECB1E805DCC00CFA4BF /* GTMOAuth2SignIn.m */; };
+		0BA10EDC1E805DE000CFA4BF /* GTMGatherInputStream.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ECE1E805DE000CFA4BF /* GTMGatherInputStream.h */; };
+		0BA10EDD1E805DE000CFA4BF /* GTMGatherInputStream.m in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ECF1E805DE000CFA4BF /* GTMGatherInputStream.m */; };
+		0BA10EDE1E805DE000CFA4BF /* GTMMIMEDocument.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ED01E805DE000CFA4BF /* GTMMIMEDocument.h */; };
+		0BA10EDF1E805DE000CFA4BF /* GTMMIMEDocument.m in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ED11E805DE000CFA4BF /* GTMMIMEDocument.m */; };
+		0BA10EE01E805DE000CFA4BF /* GTMReadMonitorInputStream.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ED21E805DE000CFA4BF /* GTMReadMonitorInputStream.h */; };
+		0BA10EE11E805DE000CFA4BF /* GTMReadMonitorInputStream.m in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ED31E805DE000CFA4BF /* GTMReadMonitorInputStream.m */; };
+		0BA10EE21E805DE000CFA4BF /* GTMSessionFetcher.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ED41E805DE000CFA4BF /* GTMSessionFetcher.h */; };
+		0BA10EE31E805DE000CFA4BF /* GTMSessionFetcher.m in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ED51E805DE000CFA4BF /* GTMSessionFetcher.m */; };
+		0BA10EE41E805DE000CFA4BF /* GTMSessionFetcherLogging.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ED61E805DE000CFA4BF /* GTMSessionFetcherLogging.h */; };
+		0BA10EE51E805DE000CFA4BF /* GTMSessionFetcherLogging.m in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ED71E805DE000CFA4BF /* GTMSessionFetcherLogging.m */; };
+		0BA10EE61E805DE000CFA4BF /* GTMSessionFetcherService.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ED81E805DE000CFA4BF /* GTMSessionFetcherService.h */; };
+		0BA10EE71E805DE000CFA4BF /* GTMSessionFetcherService.m in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ED91E805DE000CFA4BF /* GTMSessionFetcherService.m */; };
+		0BA10EE81E805DE000CFA4BF /* GTMSessionUploadFetcher.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EDA1E805DE000CFA4BF /* GTMSessionUploadFetcher.h */; };
+		0BA10EE91E805DE000CFA4BF /* GTMSessionUploadFetcher.m in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EDB1E805DE000CFA4BF /* GTMSessionUploadFetcher.m */; };
+		0BA10EFB1E80662800CFA4BF /* GoogleAppUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EF61E80662800CFA4BF /* GoogleAppUtilities.framework */; };
+		0BA10EFC1E80662800CFA4BF /* GoogleNetworkingUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EF71E80662800CFA4BF /* GoogleNetworkingUtilities.framework */; };
+		0BA10EFD1E80662800CFA4BF /* GoogleSignIn.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EF81E80662800CFA4BF /* GoogleSignIn.bundle */; };
+		0BA10EFE1E80662800CFA4BF /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EF91E80662800CFA4BF /* GoogleSignIn.framework */; };
+		0BA10EFF1E80662800CFA4BF /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EFA1E80662800CFA4BF /* GoogleSymbolUtilities.framework */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -34,8 +63,17 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* BazaarTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BazaarTests.m */; };
+		50952A2A3C5DB3AE69EDAC28 /* libPods-Bazaar-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F08C3CB19E2A9EC9CF8140F /* libPods-Bazaar-tvOSTests.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
+		66B5788F73A641E483F1758B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AB0A30CD6E140DA8962229A /* SystemConfiguration.framework */; };
+		6F37F2DC03FEFF1EE83A1470 /* libPods-Bazaar-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AAF79E8AE276C8F2A52A0989 /* libPods-Bazaar-tvOS.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
+		99AA5AFF1780469882C56B62 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0807BCE77EF6463DAB6A4F7C /* SafariServices.framework */; };
+		B3C93525892A293285DCB63A /* libPods-BazaarTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4CFE3767945063B3C9D1511B /* libPods-BazaarTests.a */; };
+		D4F4273688854172AB81FC22 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BF8E3CDA4F7A46BBA2BC48DB /* libz.tbd */; };
+		DA29AD22E5C44B1096C5B69C /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10C88656F19746BA9CEF6413 /* AddressBook.framework */; };
+		DAF6899640E243C79EED04CB /* libRNGoogleSignin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E5CF0E24AACD45C5A6B52804 /* libRNGoogleSignin.a */; };
+		EF09765DA3E35D31F12D09A9 /* libPods-Bazaar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51896E6A357845EC652CE0B3 /* libPods-Bazaar.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +118,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = Bazaar;
+		};
+		0BA10EB61E805C0B00CFA4BF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A83853B36DB5494493D32869 /* RNGoogleSignin.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9FD355121D3E4A2900D06170;
+			remoteInfo = RNGoogleSignin;
 		};
 		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -240,6 +285,39 @@
 		00E356EE1AD99517003FC87E /* BazaarTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BazaarTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* BazaarTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BazaarTests.m; sourceTree = "<group>"; };
+		01D1724D2A56DBCA7697A4F3 /* Pods-Bazaar.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bazaar.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bazaar/Pods-Bazaar.release.xcconfig"; sourceTree = "<group>"; };
+		0807BCE77EF6463DAB6A4F7C /* SafariServices.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		0BA10EB81E805C8300CFA4BF /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Pods/FirebaseAnalytics/Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		0BA10EBA1E805C9600CFA4BF /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Pods/FirebaseCore/Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
+		0BA10EBC1E805CA800CFA4BF /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Pods/FirebaseInstanceID/Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		0BA10EBE1E805CBB00CFA4BF /* GGLCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GGLCore.framework; path = Pods/Google/Frameworks/GGLCore.framework; sourceTree = "<group>"; };
+		0BA10EBF1E805CBB00CFA4BF /* GGLSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GGLSignIn.framework; path = Pods/Google/Frameworks/GGLSignIn.framework; sourceTree = "<group>"; };
+		0BA10EC21E805CC800CFA4BF /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = Pods/GoogleSignIn/Frameworks/GoogleSignIn.framework; sourceTree = "<group>"; };
+		0BA10EC41E805CE500CFA4BF /* GTMOAuth2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = GTMOAuth2; path = Pods/GTMOAuth2; sourceTree = "<group>"; };
+		0BA10EC61E805D8600CFA4BF /* GTMOAuth2Authentication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GTMOAuth2Authentication.h; path = Pods/GTMOAuth2/Source/GTMOAuth2Authentication.h; sourceTree = "<group>"; };
+		0BA10EC71E805D8600CFA4BF /* GTMOAuth2SignIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GTMOAuth2SignIn.h; path = Pods/GTMOAuth2/Source/GTMOAuth2SignIn.h; sourceTree = "<group>"; };
+		0BA10ECA1E805DCC00CFA4BF /* GTMOAuth2Authentication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GTMOAuth2Authentication.m; path = Pods/GTMOAuth2/Source/GTMOAuth2Authentication.m; sourceTree = "<group>"; };
+		0BA10ECB1E805DCC00CFA4BF /* GTMOAuth2SignIn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GTMOAuth2SignIn.m; path = Pods/GTMOAuth2/Source/GTMOAuth2SignIn.m; sourceTree = "<group>"; };
+		0BA10ECE1E805DE000CFA4BF /* GTMGatherInputStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GTMGatherInputStream.h; path = Pods/GTMSessionFetcher/Source/GTMGatherInputStream.h; sourceTree = "<group>"; };
+		0BA10ECF1E805DE000CFA4BF /* GTMGatherInputStream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GTMGatherInputStream.m; path = Pods/GTMSessionFetcher/Source/GTMGatherInputStream.m; sourceTree = "<group>"; };
+		0BA10ED01E805DE000CFA4BF /* GTMMIMEDocument.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GTMMIMEDocument.h; path = Pods/GTMSessionFetcher/Source/GTMMIMEDocument.h; sourceTree = "<group>"; };
+		0BA10ED11E805DE000CFA4BF /* GTMMIMEDocument.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GTMMIMEDocument.m; path = Pods/GTMSessionFetcher/Source/GTMMIMEDocument.m; sourceTree = "<group>"; };
+		0BA10ED21E805DE000CFA4BF /* GTMReadMonitorInputStream.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GTMReadMonitorInputStream.h; path = Pods/GTMSessionFetcher/Source/GTMReadMonitorInputStream.h; sourceTree = "<group>"; };
+		0BA10ED31E805DE000CFA4BF /* GTMReadMonitorInputStream.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GTMReadMonitorInputStream.m; path = Pods/GTMSessionFetcher/Source/GTMReadMonitorInputStream.m; sourceTree = "<group>"; };
+		0BA10ED41E805DE000CFA4BF /* GTMSessionFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcher.h; path = Pods/GTMSessionFetcher/Source/GTMSessionFetcher.h; sourceTree = "<group>"; };
+		0BA10ED51E805DE000CFA4BF /* GTMSessionFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcher.m; path = Pods/GTMSessionFetcher/Source/GTMSessionFetcher.m; sourceTree = "<group>"; };
+		0BA10ED61E805DE000CFA4BF /* GTMSessionFetcherLogging.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcherLogging.h; path = Pods/GTMSessionFetcher/Source/GTMSessionFetcherLogging.h; sourceTree = "<group>"; };
+		0BA10ED71E805DE000CFA4BF /* GTMSessionFetcherLogging.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcherLogging.m; path = Pods/GTMSessionFetcher/Source/GTMSessionFetcherLogging.m; sourceTree = "<group>"; };
+		0BA10ED81E805DE000CFA4BF /* GTMSessionFetcherService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GTMSessionFetcherService.h; path = Pods/GTMSessionFetcher/Source/GTMSessionFetcherService.h; sourceTree = "<group>"; };
+		0BA10ED91E805DE000CFA4BF /* GTMSessionFetcherService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GTMSessionFetcherService.m; path = Pods/GTMSessionFetcher/Source/GTMSessionFetcherService.m; sourceTree = "<group>"; };
+		0BA10EDA1E805DE000CFA4BF /* GTMSessionUploadFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GTMSessionUploadFetcher.h; path = Pods/GTMSessionFetcher/Source/GTMSessionUploadFetcher.h; sourceTree = "<group>"; };
+		0BA10EDB1E805DE000CFA4BF /* GTMSessionUploadFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GTMSessionUploadFetcher.m; path = Pods/GTMSessionFetcher/Source/GTMSessionUploadFetcher.m; sourceTree = "<group>"; };
+		0BA10EF61E80662800CFA4BF /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppUtilities.framework; path = GoogleAPI/GoogleAppUtilities.framework; sourceTree = "<group>"; };
+		0BA10EF71E80662800CFA4BF /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = GoogleAPI/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
+		0BA10EF81E80662800CFA4BF /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleSignIn.bundle; path = GoogleAPI/GoogleSignIn.bundle; sourceTree = "<group>"; };
+		0BA10EF91E80662800CFA4BF /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = GoogleAPI/GoogleSignIn.framework; sourceTree = "<group>"; };
+		0BA10EFA1E80662800CFA4BF /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = GoogleAPI/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		10C88656F19746BA9CEF6413 /* AddressBook.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* Bazaar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bazaar.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,11 +328,26 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Bazaar/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Bazaar/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
+		1AB0A30CD6E140DA8962229A /* SystemConfiguration.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1CC89286D45D5A2E2E947ACC /* Pods-Bazaar.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bazaar.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bazaar/Pods-Bazaar.debug.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* Bazaar-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bazaar-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* Bazaar-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bazaar-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2F08C3CB19E2A9EC9CF8140F /* libPods-Bazaar-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bazaar-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FC6422AA27AE0162AE4F692 /* Pods-BazaarTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BazaarTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BazaarTests/Pods-BazaarTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4CFE3767945063B3C9D1511B /* libPods-BazaarTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BazaarTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		51896E6A357845EC652CE0B3 /* libPods-Bazaar.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bazaar.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		539CFB30E791AAC022911E86 /* Pods-BazaarTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BazaarTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BazaarTests/Pods-BazaarTests.release.xcconfig"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
+		80CFF5C125F344D31FC6E024 /* Pods-Bazaar-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bazaar-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bazaar-tvOSTests/Pods-Bazaar-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
+		94A940A04E046A14AE4EB1F8 /* Pods-Bazaar-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bazaar-tvOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bazaar-tvOS/Pods-Bazaar-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		A83853B36DB5494493D32869 /* RNGoogleSignin.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = RNGoogleSignin.xcodeproj; path = "../node_modules/react-native-google-signin/ios/RNGoogleSignin.xcodeproj"; sourceTree = "<group>"; };
+		AAF79E8AE276C8F2A52A0989 /* libPods-Bazaar-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Bazaar-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF8E3CDA4F7A46BBA2BC48DB /* libz.tbd */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		C799931B4B94555D03D5960B /* Pods-Bazaar-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bazaar-tvOS.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bazaar-tvOS/Pods-Bazaar-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		E5CF0E24AACD45C5A6B52804 /* libRNGoogleSignin.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRNGoogleSignin.a; sourceTree = "<group>"; };
+		FEFE5423C6D45F424C28E61A /* Pods-Bazaar-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bazaar-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bazaar-tvOSTests/Pods-Bazaar-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +356,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
+				B3C93525892A293285DCB63A /* libPods-BazaarTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +364,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BA10EFB1E80662800CFA4BF /* GoogleAppUtilities.framework in Frameworks */,
+				0BA10EFC1E80662800CFA4BF /* GoogleNetworkingUtilities.framework in Frameworks */,
+				0BA10EFD1E80662800CFA4BF /* GoogleSignIn.bundle in Frameworks */,
+				0BA10EFE1E80662800CFA4BF /* GoogleSignIn.framework in Frameworks */,
+				0BA10EFF1E80662800CFA4BF /* GoogleSymbolUtilities.framework in Frameworks */,
+				0BA10EDC1E805DE000CFA4BF /* GTMGatherInputStream.h in Frameworks */,
+				0BA10EDD1E805DE000CFA4BF /* GTMGatherInputStream.m in Frameworks */,
+				0BA10EDE1E805DE000CFA4BF /* GTMMIMEDocument.h in Frameworks */,
+				0BA10EDF1E805DE000CFA4BF /* GTMMIMEDocument.m in Frameworks */,
+				0BA10EE01E805DE000CFA4BF /* GTMReadMonitorInputStream.h in Frameworks */,
+				0BA10EE11E805DE000CFA4BF /* GTMReadMonitorInputStream.m in Frameworks */,
+				0BA10EE21E805DE000CFA4BF /* GTMSessionFetcher.h in Frameworks */,
+				0BA10EE31E805DE000CFA4BF /* GTMSessionFetcher.m in Frameworks */,
+				0BA10EE41E805DE000CFA4BF /* GTMSessionFetcherLogging.h in Frameworks */,
+				0BA10EE51E805DE000CFA4BF /* GTMSessionFetcherLogging.m in Frameworks */,
+				0BA10EE61E805DE000CFA4BF /* GTMSessionFetcherService.h in Frameworks */,
+				0BA10EE71E805DE000CFA4BF /* GTMSessionFetcherService.m in Frameworks */,
+				0BA10EE81E805DE000CFA4BF /* GTMSessionUploadFetcher.h in Frameworks */,
+				0BA10EE91E805DE000CFA4BF /* GTMSessionUploadFetcher.m in Frameworks */,
+				0BA10ECC1E805DCC00CFA4BF /* GTMOAuth2Authentication.m in Frameworks */,
+				0BA10ECD1E805DCC00CFA4BF /* GTMOAuth2SignIn.m in Frameworks */,
+				0BA10EC81E805D8600CFA4BF /* GTMOAuth2Authentication.h in Frameworks */,
+				0BA10EC91E805D8600CFA4BF /* GTMOAuth2SignIn.h in Frameworks */,
+				0BA10EC31E805CC800CFA4BF /* GoogleSignIn.framework in Frameworks */,
+				0BA10EC01E805CBB00CFA4BF /* GGLCore.framework in Frameworks */,
+				0BA10EC11E805CBB00CFA4BF /* GGLSignIn.framework in Frameworks */,
+				0BA10EBD1E805CA800CFA4BF /* FirebaseInstanceID.framework in Frameworks */,
+				0BA10EBB1E805C9600CFA4BF /* FirebaseCore.framework in Frameworks */,
+				0BA10EB91E805C8300CFA4BF /* FirebaseAnalytics.framework in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -281,6 +404,12 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				DAF6899640E243C79EED04CB /* libRNGoogleSignin.a in Frameworks */,
+				D4F4273688854172AB81FC22 /* libz.tbd in Frameworks */,
+				99AA5AFF1780469882C56B62 /* SafariServices.framework in Frameworks */,
+				66B5788F73A641E483F1758B /* SystemConfiguration.framework in Frameworks */,
+				DA29AD22E5C44B1096C5B69C /* AddressBook.framework in Frameworks */,
+				EF09765DA3E35D31F12D09A9 /* libPods-Bazaar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +425,7 @@
 				2D02E4C61E0B4AEC006451C7 /* libRCTSettings-tvOS.a in Frameworks */,
 				2D02E4C71E0B4AEC006451C7 /* libRCTText-tvOS.a in Frameworks */,
 				2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */,
+				6F37F2DC03FEFF1EE83A1470 /* libPods-Bazaar-tvOS.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +433,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50952A2A3C5DB3AE69EDAC28 /* libPods-Bazaar-tvOSTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +499,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		0BA10E9A1E805C0B00CFA4BF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0BA10EB71E805C0B00CFA4BF /* libRNGoogleSignin.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		139105B71AF99BAD00B5F7CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,6 +563,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		6F6289623A55DE0A58DCE5FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1CC89286D45D5A2E2E947ACC /* Pods-Bazaar.debug.xcconfig */,
+				01D1724D2A56DBCA7697A4F3 /* Pods-Bazaar.release.xcconfig */,
+				94A940A04E046A14AE4EB1F8 /* Pods-Bazaar-tvOS.debug.xcconfig */,
+				C799931B4B94555D03D5960B /* Pods-Bazaar-tvOS.release.xcconfig */,
+				80CFF5C125F344D31FC6E024 /* Pods-Bazaar-tvOSTests.debug.xcconfig */,
+				FEFE5423C6D45F424C28E61A /* Pods-Bazaar-tvOSTests.release.xcconfig */,
+				2FC6422AA27AE0162AE4F692 /* Pods-BazaarTests.debug.xcconfig */,
+				539CFB30E791AAC022911E86 /* Pods-BazaarTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		78C398B11ACF4ADC00677621 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -447,6 +601,7 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
+				A83853B36DB5494493D32869 /* RNGoogleSignin.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -467,6 +622,8 @@
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* BazaarTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
+				840A33A8F9AE4855B1C87528 /* Frameworks */,
+				6F6289623A55DE0A58DCE5FF /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -483,6 +640,51 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		840A33A8F9AE4855B1C87528 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0BA10EF61E80662800CFA4BF /* GoogleAppUtilities.framework */,
+				0BA10EF71E80662800CFA4BF /* GoogleNetworkingUtilities.framework */,
+				0BA10EF81E80662800CFA4BF /* GoogleSignIn.bundle */,
+				0BA10EF91E80662800CFA4BF /* GoogleSignIn.framework */,
+				0BA10EFA1E80662800CFA4BF /* GoogleSymbolUtilities.framework */,
+				0BA10ECE1E805DE000CFA4BF /* GTMGatherInputStream.h */,
+				0BA10ECF1E805DE000CFA4BF /* GTMGatherInputStream.m */,
+				0BA10ED01E805DE000CFA4BF /* GTMMIMEDocument.h */,
+				0BA10ED11E805DE000CFA4BF /* GTMMIMEDocument.m */,
+				0BA10ED21E805DE000CFA4BF /* GTMReadMonitorInputStream.h */,
+				0BA10ED31E805DE000CFA4BF /* GTMReadMonitorInputStream.m */,
+				0BA10ED41E805DE000CFA4BF /* GTMSessionFetcher.h */,
+				0BA10ED51E805DE000CFA4BF /* GTMSessionFetcher.m */,
+				0BA10ED61E805DE000CFA4BF /* GTMSessionFetcherLogging.h */,
+				0BA10ED71E805DE000CFA4BF /* GTMSessionFetcherLogging.m */,
+				0BA10ED81E805DE000CFA4BF /* GTMSessionFetcherService.h */,
+				0BA10ED91E805DE000CFA4BF /* GTMSessionFetcherService.m */,
+				0BA10EDA1E805DE000CFA4BF /* GTMSessionUploadFetcher.h */,
+				0BA10EDB1E805DE000CFA4BF /* GTMSessionUploadFetcher.m */,
+				0BA10ECA1E805DCC00CFA4BF /* GTMOAuth2Authentication.m */,
+				0BA10ECB1E805DCC00CFA4BF /* GTMOAuth2SignIn.m */,
+				0BA10EC61E805D8600CFA4BF /* GTMOAuth2Authentication.h */,
+				0BA10EC71E805D8600CFA4BF /* GTMOAuth2SignIn.h */,
+				0BA10EC41E805CE500CFA4BF /* GTMOAuth2 */,
+				0BA10EC21E805CC800CFA4BF /* GoogleSignIn.framework */,
+				0BA10EBE1E805CBB00CFA4BF /* GGLCore.framework */,
+				0BA10EBF1E805CBB00CFA4BF /* GGLSignIn.framework */,
+				0BA10EBC1E805CA800CFA4BF /* FirebaseInstanceID.framework */,
+				0BA10EBA1E805C9600CFA4BF /* FirebaseCore.framework */,
+				0BA10EB81E805C8300CFA4BF /* FirebaseAnalytics.framework */,
+				BF8E3CDA4F7A46BBA2BC48DB /* libz.tbd */,
+				0807BCE77EF6463DAB6A4F7C /* SafariServices.framework */,
+				1AB0A30CD6E140DA8962229A /* SystemConfiguration.framework */,
+				10C88656F19746BA9CEF6413 /* AddressBook.framework */,
+				51896E6A357845EC652CE0B3 /* libPods-Bazaar.a */,
+				AAF79E8AE276C8F2A52A0989 /* libPods-Bazaar-tvOS.a */,
+				2F08C3CB19E2A9EC9CF8140F /* libPods-Bazaar-tvOSTests.a */,
+				4CFE3767945063B3C9D1511B /* libPods-BazaarTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -490,9 +692,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "BazaarTests" */;
 			buildPhases = (
+				13659C52B2DD241C26AAD0BE /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
+				933FEBA4B1E6B2D7ECCAD61D /* [CP] Embed Pods Frameworks */,
+				419DEEA30D12A3FE94CE0F73 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -508,10 +713,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "Bazaar" */;
 			buildPhases = (
+				7DA32EAA4E38AABDF189FC94 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				ECE64864C4272B1EE7292D93 /* [CP] Embed Pods Frameworks */,
+				DAFCF0FD19A3F90B7E3C6F46 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -526,10 +734,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BA1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Bazaar-tvOS" */;
 			buildPhases = (
+				9303D57F932BDADE973F9857 /* [CP] Check Pods Manifest.lock */,
 				2D02E4771E0B4A5D006451C7 /* Sources */,
 				2D02E4781E0B4A5D006451C7 /* Frameworks */,
 				2D02E4791E0B4A5D006451C7 /* Resources */,
 				2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */,
+				6AC7992FE37FB5C614A59693 /* [CP] Embed Pods Frameworks */,
+				12AB728C7BABE8D86BCD9E0F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -544,9 +755,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2D02E4BB1E0B4A5E006451C7 /* Build configuration list for PBXNativeTarget "Bazaar-tvOSTests" */;
 			buildPhases = (
+				78805F97038B159D973522AB /* [CP] Check Pods Manifest.lock */,
 				2D02E48C1E0B4A5D006451C7 /* Sources */,
 				2D02E48D1E0B4A5D006451C7 /* Frameworks */,
 				2D02E48E1E0B4A5D006451C7 /* Resources */,
+				644CEF35BCE82E968639BD68 /* [CP] Embed Pods Frameworks */,
+				5B756B83B4CF425A78BB30D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -564,7 +778,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 820;
 				ORGANIZATIONNAME = Facebook;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -638,6 +852,10 @@
 					ProductGroup = 146834001AC3E56700842450 /* Products */;
 					ProjectRef = 146833FF1AC3E56700842450 /* React.xcodeproj */;
 				},
+				{
+					ProductGroup = 0BA10E9A1E805C0B00CFA4BF /* Products */;
+					ProjectRef = A83853B36DB5494493D32869 /* RNGoogleSignin.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -683,6 +901,13 @@
 			fileType = archive.ar;
 			path = libRCTVibration.a;
 			remoteRef = 00C302E31ABCB9EE00DB3ED1 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		0BA10EB71E805C0B00CFA4BF /* libRNGoogleSignin.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRNGoogleSignin.a;
+			remoteRef = 0BA10EB61E805C0B00CFA4BF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		139105C11AF99BAD00B5F7CC /* libRCTSettings.a */ = {
@@ -876,6 +1101,36 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
 		};
+		12AB728C7BABE8D86BCD9E0F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bazaar-tvOS/Pods-Bazaar-tvOS-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		13659C52B2DD241C26AAD0BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		2D02E4CB1E0B4B27006451C7 /* Bundle React Native Code And Images */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -889,6 +1144,156 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
+		};
+		419DEEA30D12A3FE94CE0F73 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BazaarTests/Pods-BazaarTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5B756B83B4CF425A78BB30D2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bazaar-tvOSTests/Pods-Bazaar-tvOSTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		644CEF35BCE82E968639BD68 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bazaar-tvOSTests/Pods-Bazaar-tvOSTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AC7992FE37FB5C614A59693 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bazaar-tvOS/Pods-Bazaar-tvOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78805F97038B159D973522AB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7DA32EAA4E38AABDF189FC94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9303D57F932BDADE973F9857 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		933FEBA4B1E6B2D7ECCAD61D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BazaarTests/Pods-BazaarTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAFCF0FD19A3F90B7E3C6F46 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bazaar/Pods-Bazaar-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ECE64864C4272B1EE7292D93 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bazaar/Pods-Bazaar-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -957,15 +1362,24 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2FC6422AA27AE0162AE4F692 /* Pods-BazaarTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin/**",
+				);
 				INFOPLIST_FILE = BazaarTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -978,12 +1392,21 @@
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 539CFB30E791AAC022911E86 /* Pods-BazaarTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin/**",
+				);
 				INFOPLIST_FILE = BazaarTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -996,10 +1419,24 @@
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CC89286D45D5A2E2E947ACC /* Pods-Bazaar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/FirebaseAnalytics/Frameworks",
+					"$(PROJECT_DIR)/Pods/FirebaseCore/Frameworks",
+					"$(PROJECT_DIR)/Pods/FirebaseInstanceID/Frameworks",
+					"$(PROJECT_DIR)/Pods/Google/Frameworks",
+					"$(PROJECT_DIR)/Pods/GoogleSignIn/Frameworks",
+					"$(PROJECT_DIR)/GoogleAPI",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin/**",
+				);
 				INFOPLIST_FILE = Bazaar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1015,9 +1452,23 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01D1724D2A56DBCA7697A4F3 /* Pods-Bazaar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/FirebaseAnalytics/Frameworks",
+					"$(PROJECT_DIR)/Pods/FirebaseCore/Frameworks",
+					"$(PROJECT_DIR)/Pods/FirebaseInstanceID/Frameworks",
+					"$(PROJECT_DIR)/Pods/Google/Frameworks",
+					"$(PROJECT_DIR)/Pods/GoogleSignIn/Frameworks",
+					"$(PROJECT_DIR)/GoogleAPI",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin/**",
+				);
 				INFOPLIST_FILE = Bazaar/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -1033,6 +1484,7 @@
 		};
 		2D02E4971E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94A940A04E046A14AE4EB1F8 /* Pods-Bazaar-tvOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1043,8 +1495,16 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_TESTABILITY = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin/**",
+				);
 				INFOPLIST_FILE = "Bazaar-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1059,6 +1519,7 @@
 		};
 		2D02E4981E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C799931B4B94555D03D5960B /* Pods-Bazaar-tvOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1069,8 +1530,16 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_NO_COMMON_BLOCKS = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-google-signin/ios/RNGoogleSignin/**",
+				);
 				INFOPLIST_FILE = "Bazaar-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				OTHER_LDFLAGS = (
 					"-ObjC",
 					"-lc++",
@@ -1085,6 +1554,7 @@
 		};
 		2D02E4991E0B4A5E006451C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80CFF5C125F344D31FC6E024 /* Pods-Bazaar-tvOSTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1096,6 +1566,10 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Bazaar-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Bazaar-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -1106,6 +1580,7 @@
 		};
 		2D02E49A1E0B4A5E006451C7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEFE5423C6D45F424C28E61A /* Pods-Bazaar-tvOSTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ANALYZER_NONNULL = YES;
@@ -1117,6 +1592,10 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				INFOPLIST_FILE = "Bazaar-tvOSTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.Bazaar-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
