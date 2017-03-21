@@ -70,6 +70,7 @@ var Main = React.createClass({
 })
 
 const styles = StyleSheet.create({
+  //Change the background color to grey and make a header red
   container: {
       flex: 1,
       justifyContent: 'center',
