@@ -19,24 +19,6 @@
 		0BA10EC01E805CBB00CFA4BF /* GGLCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EBE1E805CBB00CFA4BF /* GGLCore.framework */; };
 		0BA10EC11E805CBB00CFA4BF /* GGLSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EBF1E805CBB00CFA4BF /* GGLSignIn.framework */; };
 		0BA10EC31E805CC800CFA4BF /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EC21E805CC800CFA4BF /* GoogleSignIn.framework */; };
-		0BA10EC81E805D8600CFA4BF /* GTMOAuth2Authentication.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EC61E805D8600CFA4BF /* GTMOAuth2Authentication.h */; };
-		0BA10EC91E805D8600CFA4BF /* GTMOAuth2SignIn.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EC71E805D8600CFA4BF /* GTMOAuth2SignIn.h */; };
-		0BA10ECC1E805DCC00CFA4BF /* GTMOAuth2Authentication.m in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ECA1E805DCC00CFA4BF /* GTMOAuth2Authentication.m */; };
-		0BA10ECD1E805DCC00CFA4BF /* GTMOAuth2SignIn.m in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ECB1E805DCC00CFA4BF /* GTMOAuth2SignIn.m */; };
-		0BA10EDC1E805DE000CFA4BF /* GTMGatherInputStream.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ECE1E805DE000CFA4BF /* GTMGatherInputStream.h */; };
-		0BA10EDD1E805DE000CFA4BF /* GTMGatherInputStream.m in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ECF1E805DE000CFA4BF /* GTMGatherInputStream.m */; };
-		0BA10EDE1E805DE000CFA4BF /* GTMMIMEDocument.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ED01E805DE000CFA4BF /* GTMMIMEDocument.h */; };
-		0BA10EDF1E805DE000CFA4BF /* GTMMIMEDocument.m in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ED11E805DE000CFA4BF /* GTMMIMEDocument.m */; };
-		0BA10EE01E805DE000CFA4BF /* GTMReadMonitorInputStream.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ED21E805DE000CFA4BF /* GTMReadMonitorInputStream.h */; };
-		0BA10EE11E805DE000CFA4BF /* GTMReadMonitorInputStream.m in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ED31E805DE000CFA4BF /* GTMReadMonitorInputStream.m */; };
-		0BA10EE21E805DE000CFA4BF /* GTMSessionFetcher.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ED41E805DE000CFA4BF /* GTMSessionFetcher.h */; };
-		0BA10EE31E805DE000CFA4BF /* GTMSessionFetcher.m in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ED51E805DE000CFA4BF /* GTMSessionFetcher.m */; };
-		0BA10EE41E805DE000CFA4BF /* GTMSessionFetcherLogging.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ED61E805DE000CFA4BF /* GTMSessionFetcherLogging.h */; };
-		0BA10EE51E805DE000CFA4BF /* GTMSessionFetcherLogging.m in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ED71E805DE000CFA4BF /* GTMSessionFetcherLogging.m */; };
-		0BA10EE61E805DE000CFA4BF /* GTMSessionFetcherService.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ED81E805DE000CFA4BF /* GTMSessionFetcherService.h */; };
-		0BA10EE71E805DE000CFA4BF /* GTMSessionFetcherService.m in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10ED91E805DE000CFA4BF /* GTMSessionFetcherService.m */; };
-		0BA10EE81E805DE000CFA4BF /* GTMSessionUploadFetcher.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EDA1E805DE000CFA4BF /* GTMSessionUploadFetcher.h */; };
-		0BA10EE91E805DE000CFA4BF /* GTMSessionUploadFetcher.m in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EDB1E805DE000CFA4BF /* GTMSessionUploadFetcher.m */; };
 		0BA10EFB1E80662800CFA4BF /* GoogleAppUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EF61E80662800CFA4BF /* GoogleAppUtilities.framework */; };
 		0BA10EFC1E80662800CFA4BF /* GoogleNetworkingUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EF71E80662800CFA4BF /* GoogleNetworkingUtilities.framework */; };
 		0BA10EFD1E80662800CFA4BF /* GoogleSignIn.bundle in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BA10EF81E80662800CFA4BF /* GoogleSignIn.bundle */; };
@@ -369,24 +351,6 @@
 				0BA10EFD1E80662800CFA4BF /* GoogleSignIn.bundle in Frameworks */,
 				0BA10EFE1E80662800CFA4BF /* GoogleSignIn.framework in Frameworks */,
 				0BA10EFF1E80662800CFA4BF /* GoogleSymbolUtilities.framework in Frameworks */,
-				0BA10EDC1E805DE000CFA4BF /* GTMGatherInputStream.h in Frameworks */,
-				0BA10EDD1E805DE000CFA4BF /* GTMGatherInputStream.m in Frameworks */,
-				0BA10EDE1E805DE000CFA4BF /* GTMMIMEDocument.h in Frameworks */,
-				0BA10EDF1E805DE000CFA4BF /* GTMMIMEDocument.m in Frameworks */,
-				0BA10EE01E805DE000CFA4BF /* GTMReadMonitorInputStream.h in Frameworks */,
-				0BA10EE11E805DE000CFA4BF /* GTMReadMonitorInputStream.m in Frameworks */,
-				0BA10EE21E805DE000CFA4BF /* GTMSessionFetcher.h in Frameworks */,
-				0BA10EE31E805DE000CFA4BF /* GTMSessionFetcher.m in Frameworks */,
-				0BA10EE41E805DE000CFA4BF /* GTMSessionFetcherLogging.h in Frameworks */,
-				0BA10EE51E805DE000CFA4BF /* GTMSessionFetcherLogging.m in Frameworks */,
-				0BA10EE61E805DE000CFA4BF /* GTMSessionFetcherService.h in Frameworks */,
-				0BA10EE71E805DE000CFA4BF /* GTMSessionFetcherService.m in Frameworks */,
-				0BA10EE81E805DE000CFA4BF /* GTMSessionUploadFetcher.h in Frameworks */,
-				0BA10EE91E805DE000CFA4BF /* GTMSessionUploadFetcher.m in Frameworks */,
-				0BA10ECC1E805DCC00CFA4BF /* GTMOAuth2Authentication.m in Frameworks */,
-				0BA10ECD1E805DCC00CFA4BF /* GTMOAuth2SignIn.m in Frameworks */,
-				0BA10EC81E805D8600CFA4BF /* GTMOAuth2Authentication.h in Frameworks */,
-				0BA10EC91E805D8600CFA4BF /* GTMOAuth2SignIn.h in Frameworks */,
 				0BA10EC31E805CC800CFA4BF /* GoogleSignIn.framework in Frameworks */,
 				0BA10EC01E805CBB00CFA4BF /* GGLCore.framework in Frameworks */,
 				0BA10EC11E805CBB00CFA4BF /* GGLSignIn.framework in Frameworks */,

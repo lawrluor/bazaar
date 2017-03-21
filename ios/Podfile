@@ -17,6 +17,7 @@ target 'Bazaar' do
     # Pods for testing
   end
  pod 'Google/SignIn'
+ pod 'GTMOAuth2','~> 1.1'
 end
 
 target 'Bazaar-tvOS' do

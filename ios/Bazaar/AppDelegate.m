@@ -7,8 +7,9 @@
  * of patent rights can be found in the PATENTS file in the same directory.
  */
 
+// add this line before @implementation AppDelegate
+#import <RNGoogleSignin.h>
 #import "AppDelegate.h"
-
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
 
@@ -33,9 +34,6 @@
   [self.window makeKeyAndVisible];
   return YES;
 }
-
-// add this line before @implementation AppDelegate
-#import <RNGoogleSignin/RNGoogleSignin.h>
 
 // add this method before @end
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url

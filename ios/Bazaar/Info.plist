@@ -25,7 +25,15 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>722603088219-9rf3vkglf4o0lr7ap4r9u21c12njtbhi.apps.googleusercontent.com	</string>
+				<string>com.googleusercontent.apps.581614335691-30hbflqfc3r5sfpn0l6t6csskk65he6n</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>org.reactjs.native.example.Bazaar</string>
 			</array>
 		</dict>
 	</array>
