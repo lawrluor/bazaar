@@ -17,9 +17,9 @@ import {
 } from 'react-native';
 
 // import Main from './main'
-import Items from './items';
+import Items from './AppCode/iOS/items';
 
-import LoginButtons from './LoginButtons';
+import LoginButtons from './AppCode/iOS/LoginButtons';
 
 var Bazaar = React.createClass({
   renderScene(route, navigator) {
