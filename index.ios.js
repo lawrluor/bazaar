@@ -20,9 +20,16 @@ import AddItemView from './AppCode/iOS/AddItemView.js'
 
 // import Main from './main'
 import Items from './AppCode/iOS/items';
-
-
 import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
+import * as firebase from 'firebase';
+
+//Initiaizing firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyB4T2rvQweJNcYi-DPt30XWRuf1BXviFJA",
+  authDomain: "bazaar-2f761.firebaseapp.com",
+  databaseURL: "https://bazaar-2f761.firebaseio.com/",
+};
+const firebaseApp = firebase.initializeApp(firebaseConfig);
 
 var Bazaar = React.createClass({
 
