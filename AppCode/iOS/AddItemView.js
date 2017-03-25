@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Text, View, Image, TextInput, Button, Alert } from 'react-native';
+import { AppRegistry, StyleSheet, Text, View, Image, TextInput, Button, Alert, Dimensions } from 'react-native';
 
 class AddItemView extends Component {
 
@@ -23,7 +23,7 @@ class AddItemView extends Component {
           </Text>
         </View>
         <View style={styles.separatorHorizontal} />
-        <View style={{ flex: 9.2 }}>
+        <View style={{ flex: 9.2, backgroundColor: '#960819' }}>
           <TextInput
             style={styles.textInputName}
             onChangeText={(text) => this.setState({ itemName: text })}
@@ -44,13 +44,29 @@ class AddItemView extends Component {
             onChangeText={(text) => this.setState({ itemExpDate: text })}
             placeholder={"Enter item expiration date - Ex: 03/30/17"}
           />
+            </View>
+          <View style={styles.buttonView}>
+            <Button
+              onPress={() => this.submitItem()}
+              title="Submit item"
+            />
+          </View>
+          <View style={styles.separatorHorizontal}/>
+          <View style={styles.buttonView}>
           <Button
-            onPress={() => this.submitItem()}
-            title="Submit item"
+            onPress={() => this._navigate()}
+            title="Go to item view"
           />
-        </View>
+          </View>
+    
       </View>
     );
+  }
+
+  _navigate() {
+    this.props.navigator.push({
+      name: 'itemsView',
+    })
   }
 
   addItemFirebase() {
@@ -98,19 +114,19 @@ class AddItemView extends Component {
       return false
     }
     //Adding dollar symbol
-    if (this.state.itemPrice.slice(-1) != '$'){
+    if (this.state.itemPrice.slice(-1) != '$') {
       var aux = this.state.itemPrice
       aux += '$'
       console.log("aux", aux)
       this.setState({
         itemPrice: aux
       },
-      console.log("Yoouhou", this.state.itemPrice))
+        console.log("Yoouhou", this.state.itemPrice))
     }
     return true
   }
 
-  quantityCheck(){
+  quantityCheck() {
     console.log("checking quantity")
     if (this.state.itemQuantity == '') {
       Alert.alert(
@@ -165,7 +181,8 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     borderColor: 'gray',
     borderWidth: 0.3,
-    borderRadius: 5
+    borderRadius: 5,
+    backgroundColor: 'white'
   },
   textInputPrice: {
     height: 40,
@@ -175,9 +192,10 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
     borderColor: 'gray',
     borderWidth: 0.3,
-    borderRadius: 5
+    borderRadius: 5,
+    backgroundColor: 'white'
   },
-    textInputQuantity: {
+  textInputQuantity: {
     height: 40,
     marginTop: 20,
     marginRight: 20,
@@ -186,17 +204,21 @@ const styles = StyleSheet.create({
     borderColor: 'gray',
     borderWidth: 0.3,
     borderRadius: 5,
+    backgroundColor: 'white'
   },
   textInputExpiration: {
     height: 40,
     marginTop: 20,
     marginRight: 20,
     marginLeft: 20,
-    marginBottom: 50,
     paddingLeft: 10,
     borderColor: 'gray',
     borderWidth: 0.3,
     borderRadius: 5,
+    backgroundColor: 'white'
+  },
+  buttonView:{
+    backgroundColor: 'white'
   }
 });
 

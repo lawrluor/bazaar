@@ -17,9 +17,9 @@ import {
 } from 'react-native';
 import Button from 'react-native-button';
 import AddItemView from './AppCode/iOS/AddItemView.js'
+import ItemsView from './AppCode/iOS/ItemsView.js';
 
 // import Main from './main'
-import Items from './AppCode/iOS/items';
 import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
 import * as firebase from 'firebase';
 
@@ -37,12 +37,12 @@ var Bazaar = React.createClass({
     if (route.name == 'Main') {
       return <Main navigator={navigator} />
     }
-    if (route.name == 'Items') {
-      return <Items navigator={navigator} />
-    }
     //addItem route - debug only
     if (route.name == 'addItem') {
       return <AddItemView navigator={navigator} firebaseApp={firebaseApp}/>
+    }
+    if (route.name == 'itemsView'){
+      return <ItemsView navigator={navigator} firebaseApp={firebaseApp}/>
     }
   },
   render() {
