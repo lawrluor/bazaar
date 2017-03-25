@@ -13,48 +13,53 @@ import {
   View,
   Navigator,
   Image,
-  TouchableHighlight
+  TouchableHighlight,
 } from 'react-native';
 import Button from 'react-native-button';
+import AddItemView from './AppCode/iOS/AddItemView.js'
 
 // import Main from './main'
 import Items from './AppCode/iOS/items';
 
 
-import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
+import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
 
 var Bazaar = React.createClass({
 
   renderScene(route, navigator) {
-    if(route.name == 'Main') {
+    if (route.name == 'Main') {
       return <Main navigator={navigator} />
     }
-    if(route.name == 'Items') {
+    if (route.name == 'Items') {
       return <Items navigator={navigator} />
+    }
+    //addItem route - debug only
+    if (route.name == 'addItem') {
+      return <AddItemView navigator={navigator} />
     }
   },
   render() {
     return (
       <Navigator
-        style={{ flex:1 }}
+        style={{ flex: 1 }}
         initialRoute={{ name: 'Main' }}
-        renderScene={ this.renderScene }
+        renderScene={this.renderScene}
       />
     )
   }
 });
 
-class Main extends Component{
+class Main extends Component {
   /**
   * Google Sign in
   */
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       user: null
     };
   }
-  componentDidMount(){
+  componentDidMount() {
     this._setupGoogleSignin();
   }
 
@@ -67,70 +72,82 @@ class Main extends Component{
     })
   };
 
+  _navigateAddItem() {
+    this.props.navigator.push({
+      name: 'addItem'
+    })
+  };
+
   render() {
     //If user is not registered
-    if(!this.state.user){
-      return(
-        <View style={ styles.container }>
-          <View style={ styles.barMenu }>
-            <View style={ styles.containerLogoTitle}>
+    if (!this.state.user) {
+      return (
+        <View style={styles.container}>
+          <View style={styles.barMenu}>
+            <View style={styles.containerLogoTitle}>
               <Image style={styles.logoTitle} source={require('./img/logo.png')} />
             </View>
-            <View style={ styles.containerBarTitle}>
-              <Text style={ styles.barTitle }>Bazaar</Text>
+            <View style={styles.containerBarTitle}>
+              <Text style={styles.barTitle}>Bazaar</Text>
             </View>
-            <View style={ styles.containerLogoTitle}>
+            <View style={styles.containerLogoTitle}>
             </View>
           </View>
-          <View style={ styles.bodyContainer }>
+          <View style={styles.bodyContainer}>
             <View>
               <Text style={styles.titleBazaar}>Bazaar</Text>
-              <Text style={ styles.otherTitle }>"Connect, Exchange, Eat"</Text>
+              <Text style={styles.otherTitle}>"Connect, Exchange, Eat"</Text>
             </View>
 
-            <Button style={styleButtonLogin.createStyle} containerStyle= { styleButtonLogin.createButton } onPress={this._signIn.bind(this)}>
+            <Button style={styleButtonLogin.createStyle} containerStyle={styleButtonLogin.createButton} onPress={this._signIn.bind(this)}>
               <Image style={styleButtonLogin.logoGoogle} source={require('./img/logoGoogle.png')} />
               SIGN IN WITH GOOGLE
             </Button>
+          </View>
+          <View style={styles.debugView}>
+            <Button
+              onPress={this._navigateAddItem.bind(this)}>
+              addItem view
+             </Button> 
           </View>
         </View>
       );
     }
 
     //If user is registered
-    if(this.state.user){
+    if (this.state.user) {
       return (
-        <View style={ styles.container }>
-          <View style={ styles.barMenu }>
-            <View style={ styles.containerLogoTitle}>
+        <View style={styles.container}>
+          <View style={styles.barMenu}>
+            <View style={styles.containerLogoTitle}>
               <Image style={styles.logoTitle} source={require('./img/logo.png')} />
             </View>
-            <View style={ styles.containerBarTitle}>
-              <Text style={ styles.barTitle }>Bazaar</Text>
+            <View style={styles.containerBarTitle}>
+              <Text style={styles.barTitle}>Bazaar</Text>
             </View>
-            <View style={ styles.containerImageTitle}>
-              <Image style={ styles.profileImage } source={{ uri: this.state.user.photo}}/>
+            <View style={styles.containerImageTitle}>
+              <Image style={styles.profileImage} source={{ uri: this.state.user.photo }} />
             </View>
           </View>
-          <View style={ styles.bodyContainer }>
+          <View style={styles.bodyContainer}>
             <View>
               <Text>Hello {this.state.user.name} </Text>
-              <Button style={styleButtonLogin.logoutStyle} containerStyle= { styleButtonLogin.logoutButton } onPress={() => {this._signOut(); }}>
+              <Button style={styleButtonLogin.logoutStyle} containerStyle={styleButtonLogin.logoutButton} onPress={() => { this._signOut(); }}>
                 Log out
               </Button>
             </View>
-            <Text style={ styles.heading }>Main Scene</Text>
-            <TouchableHighlight style={ styles.button } onPress={ () => this._navigate() }>
-              <Text style={ styles.buttonText }>GO to Items</Text>
+            <Text style={styles.heading}>Main Scene</Text>
+            <TouchableHighlight style={styles.button} onPress={() => this._navigate()}>
+              <Text style={styles.buttonText}>GO to Items</Text>
             </TouchableHighlight>
           </View>
         </View>
       );
     }
   }
-  async _setupGoogleSignin(){
-    try{
-      await GoogleSignin.hasPlayServices({autoResolve: true});
+  async _setupGoogleSignin() {
+    try {
+      await GoogleSignin.hasPlayServices({ autoResolve: true });
       await GoogleSignin.configure({
         iosClientId: '581614335691-30hbflqfc3r5sfpn0l6t6csskk65he6n.apps.googleusercontent.com',
         offlineAccess: false
@@ -138,42 +155,42 @@ class Main extends Component{
 
       const user = await GoogleSignin.currentUserAsync();
       console.log(user);
-      this.setState({user});
+      this.setState({ user });
     }
-    catch(err){
+    catch (err) {
       console.log("Google Signin error", err.code, err.message);
     }
 
   }
 
   _signIn() {
-      GoogleSignin.signIn()
+    GoogleSignin.signIn()
       .then((user) => {
         console.log(user);
-        this.setState({user: user});
+        this.setState({ user: user });
       })
       .catch((err) => {
         console.log('WRONG SIGNIN', err);
       })
       .done();
-    }
+  }
 
-    _signOut() {
-      GoogleSignin.revokeAccess().then(() => GoogleSignin.signOut()).then(() => {
-        this.setState({user: null});
-      })
+  _signOut() {
+    GoogleSignin.revokeAccess().then(() => GoogleSignin.signOut()).then(() => {
+      this.setState({ user: null });
+    })
       .done();
-    }
+  }
 };
 
 const styles = StyleSheet.create({
   //Change the background color to grey and make a header red
 
   container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#FFFFFF'
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#FFFFFF'
   },
   barMenu: {
     flex: 0.1,
@@ -215,14 +232,14 @@ const styles = StyleSheet.create({
     borderRadius: 25
   },
   bodyContainer: {
-    flex: 0.9,
+    flex: 0.8,
     backgroundColor: '#FFFFFF',
     justifyContent: 'center',
     alignItems: 'center'
   },
   title: {
-      fontSize: 50,
-      backgroundColor: '#FFFFFF'
+    fontSize: 50,
+    backgroundColor: '#FFFFFF'
   },
   otherTitle: {
     color: '#444444',
@@ -236,6 +253,9 @@ const styles = StyleSheet.create({
     fontFamily: 'Futura',
     textAlign: 'center'
   },
+  debugView: {
+    flex: 0.1,
+  }
 });
 const styleButtonLogin = StyleSheet.create({
 
@@ -248,28 +268,28 @@ const styleButtonLogin = StyleSheet.create({
     alignItems: 'center',
     borderRadius: 3,
     margin: 10,
-    height:40
+    height: 40
   },
-	createButton: {
-		justifyContent: 'center',
-		alignItems: 'center',
-		backgroundColor: '#4285F4',
-	  borderRadius: 3,
-		margin: 10,
-		height:40,
-	},
-	createStyle: {
-		fontSize: 14,
-		padding: 8,
-		paddingRight: 28,
-		color: '#FFFFFF'
-	},
-	logoGoogle: {
-		marginLeft: 0,
-		paddingLeft: 0,
-		height: 45,
-		width: 45,
-	}
+  createButton: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#4285F4',
+    borderRadius: 3,
+    margin: 10,
+    height: 40,
+  },
+  createStyle: {
+    fontSize: 14,
+    padding: 8,
+    paddingRight: 28,
+    color: '#FFFFFF'
+  },
+  logoGoogle: {
+    marginLeft: 0,
+    paddingLeft: 0,
+    height: 45,
+    width: 45,
+  }
 
 });
 

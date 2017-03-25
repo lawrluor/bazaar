@@ -32,7 +32,7 @@ class LoginButtons extends Component{
       return(
         <View>
           <Text>Hello {this.state.user.name} </Text>
-          <Button style={styles.logoutStyle} containerStyle= { styles.logoutButton } onPress={this._signOut();}>
+          <Button style={styles.logoutStyle} containerStyle= { styles.logoutButton } onPress={this._signOut()}>
             Log out
           </Button>
         </View>
