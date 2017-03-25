@@ -42,7 +42,7 @@ var Bazaar = React.createClass({
     }
     //addItem route - debug only
     if (route.name == 'addItem') {
-      return <AddItemView navigator={navigator} firebaseDependencies={firebaseApp}/>
+      return <AddItemView navigator={navigator} firebaseApp={firebaseApp}/>
     }
   },
   render() {
