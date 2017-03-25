@@ -8,6 +8,7 @@ class AddItemView extends Component {
     this.state = {
       itemName: '',
       itemPrice: '',
+      itemQuantity: '',
       itemExpDate: '',
       itemsRef: this.props.firebaseApp.database().ref()
     };
@@ -34,6 +35,11 @@ class AddItemView extends Component {
             placeholder={"Enter item price"}
           />
           <TextInput
+            style={styles.textInputQuantity}
+            onChangeText={(text) => this.setState({ itemQuantity: text })}
+            placeholder={"Enter item quantity"}
+          />
+          <TextInput
             style={styles.textInputExpiration}
             onChangeText={(text) => this.setState({ itemExpDate: text })}
             placeholder={"Enter item expiration date - Ex: 03/30/17"}
@@ -48,13 +54,13 @@ class AddItemView extends Component {
   }
 
   addItemFirebase() {
-    this.state.itemsRef.push({ name: this.state.itemName, price: this.state.itemPrice, expDate: this.state.itemExpDate })
+    this.state.itemsRef.push({ name: this.state.itemName, price: this.state.itemPrice, quantity: this.state.itemQuantity, expDate: this.state.itemExpDate })
   }
 
   submitItem() {
     console.log("submit item")
     //Checking if the name, the price, the expiration date are correct
-    if (this.nameCheck() && this.priceCheck() && this.expDateCheck()) {
+    if (this.nameCheck() && this.priceCheck() && this.quantityCheck() && this.expDateCheck()) {
       //Add all the database code to submit the item
       this.addItemFirebase()
     }
@@ -100,6 +106,22 @@ class AddItemView extends Component {
         itemPrice: aux
       },
       console.log("Yoouhou", this.state.itemPrice))
+    }
+    return true
+  }
+
+  quantityCheck(){
+    console.log("checking quantity")
+    if (this.state.itemQuantity == '') {
+      Alert.alert(
+        'Error',
+        'Enter a valid item quantity',
+        [
+          { text: 'Cancel', onPress: () => console.log('Cancel Pressed'), style: 'cancel' }
+        ],
+        { cancelable: false }
+      )
+      return false
     }
     return true
   }
@@ -154,6 +176,16 @@ const styles = StyleSheet.create({
     borderColor: 'gray',
     borderWidth: 0.3,
     borderRadius: 5
+  },
+    textInputQuantity: {
+    height: 40,
+    marginTop: 20,
+    marginRight: 20,
+    marginLeft: 20,
+    paddingLeft: 10,
+    borderColor: 'gray',
+    borderWidth: 0.3,
+    borderRadius: 5,
   },
   textInputExpiration: {
     height: 40,
