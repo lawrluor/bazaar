@@ -5,6 +5,8 @@ import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
 
 import Button from 'react-native-button';
 
+import Items from './items';
+
 class LoginButtons extends Component{
   constructor(props){
     super(props);
@@ -29,7 +31,10 @@ class LoginButtons extends Component{
     if(this.state.user){
       return(
         <View>
-          <Text>Hello</Text>
+          <Text>Hello {this.state.user.name} </Text>
+          <Button style={styles.logoutStyle} containerStyle= { styles.logoutButton } onPress={this._signOut();}>
+            Log out
+          </Button>
         </View>
       );
     }
@@ -79,11 +84,22 @@ class LoginButtons extends Component{
 
 const styles = StyleSheet.create({
 
+  logoutStyle: {
+    color: '#FFFFFF'
+  },
+  logoutButton: {
+    justifyContent: 'center',
+    backgroundColor: '#E8001C',
+    alignItems: 'center',
+    borderRadius: 3,
+    margin: 10,
+    height:40
+  },
 	createButton: {
 		justifyContent: 'center',
 		alignItems: 'center',
 		backgroundColor: '#4285F4',
-	        borderRadius: 3,
+	  borderRadius: 3,
 		margin: 10,
 		height:40,
 	},
