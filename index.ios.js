@@ -1,32 +1,14 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  StyleSheet,
-  ListView,
-  Text,
-  View,
-  Navigator,
-  Image,
-  TouchableHighlight,
-} from 'react-native';
+import { AppRegistry, StyleSheet, ListView, Text, View, Navigator, Image, TouchableHighlight } from 'react-native';
 import Button from 'react-native-button';
-
 import LoginPage from './AppCode/iOS/LoginPage.js';
 import HeaderMenu from './AppCode/iOS/HeaderMenu.js'
-
-
 import AddItemView from './AppCode/iOS/AddItemView.js'
 import ItemsView from './AppCode/iOS/ItemsView.js';
-
-// import Main from './main'
 import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
 import * as firebase from 'firebase';
+//import {FBLogin, FBLoginManager} from 'react-native-facebook-login';
+
 
 //Initiaizing firebase
 const firebaseConfig = {
@@ -36,7 +18,6 @@ const firebaseConfig = {
 };
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
-//import {FBLogin, FBLoginManager} from 'react-native-facebook-login';
 
 
 var Bazaar = React.createClass({
