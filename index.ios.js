@@ -17,16 +17,27 @@ import {
 } from 'react-native';
 import Button from 'react-native-button';
 
-import AddItemView from './AppCode/iOS/AddItemView.js';
 import LoginPage from './AppCode/iOS/LoginPage.js';
 import HeaderMenu from './AppCode/iOS/HeaderMenu.js'
 
-// import Main from './main'
-import Items from './AppCode/iOS/items';
 
-import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
+import AddItemView from './AppCode/iOS/AddItemView.js'
+import ItemsView from './AppCode/iOS/ItemsView.js';
+
+// import Main from './main'
+import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
+import * as firebase from 'firebase';
+
+//Initiaizing firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyB4T2rvQweJNcYi-DPt30XWRuf1BXviFJA",
+  authDomain: "bazaar-2f761.firebaseapp.com",
+  databaseURL: "https://bazaar-2f761.firebaseio.com/",
+};
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+
 //import {FBLogin, FBLoginManager} from 'react-native-facebook-login';
->>>>>>> Stashed changes
+
 
 var Bazaar = React.createClass({
 
