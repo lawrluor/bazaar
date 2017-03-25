@@ -16,20 +16,17 @@ import {
   TouchableHighlight,
 } from 'react-native';
 import Button from 'react-native-button';
-import AddItemView from './AppCode/iOS/AddItemView.js'
-import ItemsView from './AppCode/iOS/ItemsView.js';
+
+import AddItemView from './AppCode/iOS/AddItemView.js';
+import LoginPage from './AppCode/iOS/LoginPage.js';
+import HeaderMenu from './AppCode/iOS/HeaderMenu.js'
 
 // import Main from './main'
-import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
-import * as firebase from 'firebase';
+import Items from './AppCode/iOS/items';
 
-//Initiaizing firebase
-const firebaseConfig = {
-  apiKey: "AIzaSyB4T2rvQweJNcYi-DPt30XWRuf1BXviFJA",
-  authDomain: "bazaar-2f761.firebaseapp.com",
-  databaseURL: "https://bazaar-2f761.firebaseio.com/",
-};
-const firebaseApp = firebase.initializeApp(firebaseConfig);
+import {GoogleSignin, GoogleSigninButton} from 'react-native-google-signin';
+//import {FBLogin, FBLoginManager} from 'react-native-facebook-login';
+>>>>>>> Stashed changes
 
 var Bazaar = React.createClass({
 
@@ -63,9 +60,10 @@ class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user: null
+      user: null,
     };
   }
+
   componentDidMount() {
     this._setupGoogleSignin();
   }
@@ -86,71 +84,21 @@ class Main extends Component {
   };
 
   render() {
+      console.log('USER:',this.props.user);
     //If user is not registered
-    if (!this.state.user) {
-      return (
-        <View style={styles.container}>
-          <View style={styles.barMenu}>
-            <View style={styles.containerLogoTitle}>
-              <Image style={styles.logoTitle} source={require('./img/logo.png')} />
-            </View>
-            <View style={styles.containerBarTitle}>
-              <Text style={styles.barTitle}>Bazaar</Text>
-            </View>
-            <View style={styles.containerLogoTitle}>
-            </View>
-          </View>
-          <View style={styles.bodyContainer}>
-            <View>
-              <Text style={styles.titleBazaar}>Bazaar</Text>
-              <Text style={styles.otherTitle}>"Connect, Exchange, Eat"</Text>
-            </View>
+    return (
+      <View style={styles.container}>
+        <HeaderMenu user={this.state.user}/>
+        <LoginPage user={this.state.user} signIn={this._signIn.bind(this)} signOut={this._signOut.bind(this)}/>
 
-            <Button style={styleButtonLogin.createStyle} containerStyle={styleButtonLogin.createButton} onPress={this._signIn.bind(this)}>
-              <Image style={styleButtonLogin.logoGoogle} source={require('./img/logoGoogle.png')} />
-              SIGN IN WITH GOOGLE
-            </Button>
-          </View>
-          <View style={styles.debugView}>
-            <Button
-              onPress={this._navigateAddItem.bind(this)}>
-              addItem view
-             </Button> 
-          </View>
+        <View style={styles.debugView}>
+          <Button
+            onPress={this._navigateAddItem.bind(this)}>
+            addItem view
+           </Button>
         </View>
-      );
-    }
-
-    //If user is registered
-    if (this.state.user) {
-      return (
-        <View style={styles.container}>
-          <View style={styles.barMenu}>
-            <View style={styles.containerLogoTitle}>
-              <Image style={styles.logoTitle} source={require('./img/logo.png')} />
-            </View>
-            <View style={styles.containerBarTitle}>
-              <Text style={styles.barTitle}>Bazaar</Text>
-            </View>
-            <View style={styles.containerImageTitle}>
-              <Image style={styles.profileImage} source={{ uri: this.state.user.photo }} />
-            </View>
-          </View>
-          <View style={styles.bodyContainer}>
-            <View>
-              <Text>Hello {this.state.user.name} </Text>
-              <Button style={styleButtonLogin.logoutStyle} containerStyle={styleButtonLogin.logoutButton} onPress={() => { this._signOut(); }}>
-                Log out
-              </Button>
-            </View>
-            <Text style={styles.heading}>Main Scene</Text>
-            <TouchableHighlight style={styles.button} onPress={() => this._navigate()}>
-              <Text style={styles.buttonText}>GO to Items</Text>
-            </TouchableHighlight>
-          </View>
-        </View>
-      );
-    }
+      </View>
+    );
   }
   async _setupGoogleSignin() {
     try {
@@ -215,89 +163,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
-  barTitle: {
-    color: '#FFFFFF',
-    fontFamily: 'Futura',
-    fontSize: 30,
-  },
-  containerLogoTitle: {
-    flex: 0.3,
-  },
-  containerImageTitle: {
-    flex: 0.3,
-    alignItems: 'flex-end'
-  },
-  logoTitle: {
-    margin: 20,
-    width: 50,
-    height: 50,
-  },
-  profileImage: {
-    width: 50,
-    height: 50,
-    margin: 20,
-    borderRadius: 25
-  },
-  bodyContainer: {
-    flex: 0.8,
-    backgroundColor: '#FFFFFF',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  title: {
-    fontSize: 50,
-    backgroundColor: '#FFFFFF'
-  },
-  otherTitle: {
-    color: '#444444',
-    fontSize: 20,
-    textAlign: 'center',
-    marginBottom: 30
-  },
-  titleBazaar: {
-    color: '#960819',
-    fontSize: 60,
-    fontFamily: 'Futura',
-    textAlign: 'center'
-  },
   debugView: {
     flex: 0.1,
   }
-});
-const styleButtonLogin = StyleSheet.create({
-
-  logoutStyle: {
-    color: '#FFFFFF'
-  },
-  logoutButton: {
-    justifyContent: 'center',
-    backgroundColor: '#E8001C',
-    alignItems: 'center',
-    borderRadius: 3,
-    margin: 10,
-    height: 40
-  },
-  createButton: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#4285F4',
-    borderRadius: 3,
-    margin: 10,
-    height: 40,
-  },
-  createStyle: {
-    fontSize: 14,
-    padding: 8,
-    paddingRight: 28,
-    color: '#FFFFFF'
-  },
-  logoGoogle: {
-    marginLeft: 0,
-    paddingLeft: 0,
-    height: 45,
-    width: 45,
-  }
-
 });
 
 AppRegistry.registerComponent('Bazaar', () => Bazaar);
