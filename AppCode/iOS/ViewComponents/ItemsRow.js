@@ -9,34 +9,74 @@ class ItemsRow extends Component {
       name: this.props.name,
       price: this.props.price,
       quantity: this.props.quantity,
-      expDate: this.props.expDate
+      expDate: this.props.expDate,
+      expanded: false
     }
   }
 
 
   render() {
     console.log(this.state.price)
-    return (
-      <View style={styles.tile}>
-        <View style={styles.priceView}>
-          <Text style={styles.priceText}>
-            {this.state.price}
-          </Text>  
-        </View>
-        <View style={styles.textView}>
-          <Text style={styles.nameText}>
-            {this.state.quantity + ' ' + this.state.name}
-          </Text>
-          <Text style={styles.expDateText}>
-            {this.state.expDate}
-          </Text>  
-        </View>  
-      </View>
-    )
+    if (!this.state.expanded) {
+      return (
+        <TouchableHighlight onPress={() => this.expanding()}>
+          <View style={styles.tile}>
+            <View style={styles.priceView}>
+              <Text style={styles.priceText}>
+                {this.state.price}
+              </Text>
+            </View>
+            <View style={styles.textView}>
+              <Text style={styles.nameText}>
+                {this.state.quantity + ' ' + this.state.name}
+              </Text>
+              <Text style={styles.expDateText}>
+                {this.state.expDate}
+              </Text>
+            </View>
+          </View>
+        </TouchableHighlight>
+      )
+    }
+    else{
+      console.log("other view")
+      return (
+        <TouchableHighlight onPress={() => this.expanding()}>
+          <View style={{flex: 2}}>
+          <View style={styles.tile}>
+            <View style={styles.priceView}>
+              <Text style={styles.priceText}>
+                {this.state.price}
+              </Text>
+            </View>
+            <View style={styles.textView}>
+              <Text style={styles.nameText}>
+                {this.state.quantity + ' ' + this.state.name}
+              </Text>
+              <Text style={styles.expDateText}>
+                {this.state.expDate}
+              </Text>
+            </View>
+          </View>
+          <View style={{flex:1, backgroundColor:'blue'}}/>
+          </View>
+        </TouchableHighlight>
+      )
+    }
   }
 
-
-
+  expanding() {
+    if (this.state.expanded) {
+      this.setState({
+        expanded: false
+      })
+    }
+    else {
+      this.setState({
+        expanded: true
+      })
+    }
+  }
 }
 
 
@@ -62,7 +102,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: '200'
   },
-  expDateText:{
+  expDateText: {
     fontSize: 15,
     marginBottom: 5
   },

@@ -12,7 +12,7 @@ class Items extends Component {
 		this.state = {
 			itemsRef: this.props.firebaseApp.database().ref(),
 			dataSource: ds.cloneWithRows([]),
-			itemsFirebase: []
+			itemsFirebase: [],
 		};
 	}
 
@@ -61,7 +61,7 @@ class Items extends Component {
 
 			this.setState({
 				dataSource: this.state.dataSource.cloneWithRows(items),
-				itemsFirebase: items
+				itemsFirebase: items,
 			});
 
 		});
