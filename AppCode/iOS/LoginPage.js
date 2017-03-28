@@ -1,26 +1,38 @@
 import React, {Component} from 'react';
-import {AppRegistry, StyleSheet, Text, View, Image, TouchableHighlight } from 'react-native';
+import {AppRegistry, StyleSheet, Text, View, Image, TouchableHighlight, ListView } from 'react-native';
 import Button from 'react-native-button';
+import ItemsRow from './ViewComponents/ItemsRow.js'
 
 class LoginPage extends Component{
   constructor(props){
     super(props);
+    const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2})
+    this.state={
+      itemsRef: this.props.firebaseApp.database().ref(),
+      dataSource: ds.cloneWithRows([]),
+      itemsFirebase: []
+    }
+  }
+
+  componentWillMount(){
+    this.listenForItems(this.state.itemsRef);
   }
 
   render(){
     if(this.props.user){
       return(
         <View style={styles.bodyContainer}>
-          <View>
-            <Text>Hello {this.props.user.name} </Text>
+          <View style={{width:350}}>
+            <ListView
+              enableEmptySections={true}
+              key={this.state.dataSource}
+              dataSource={this.state.dataSource}
+              renderRow={(itemsFirebase) => <ItemsRow navigator={this.props.navigator} {...itemsFirebase} />}
+            />
             <Button style={styleButtonLogin.logoutStyle} containerStyle={styleButtonLogin.logoutButton} onPress={this.props.signOut}>
               Log out
             </Button>
           </View>
-          <Text style={styles.heading}>Main Scene</Text>
-          <TouchableHighlight style={styles.button} onPress={() => this._navigate()}>
-            <Text style={styles.buttonText}>GO to Items</Text>
-          </TouchableHighlight>
         </View>
       );
     }
@@ -42,6 +54,31 @@ class LoginPage extends Component{
 
   }
 
+  listenForItems(itemsRef) {
+		itemsRef.on('value', (snap) => {
+			// get children as an array
+			var items = [];
+			snap.forEach((child) => {
+				items.push({
+					name: child.val().name,
+					price: child.val().price,
+					quantity: child.val().quantity,
+					expDate: child.val().expDate,
+					_key: child.key
+				});
+			});
+
+			console.log("items", items)
+
+			this.setState({
+				dataSource: this.state.dataSource.cloneWithRows(items),
+				itemsFirebase: items
+			});
+
+		});
+	}
+
+
 }
 
 const styles = StyleSheet.create({
@@ -50,7 +87,7 @@ const styles = StyleSheet.create({
     flex: 0.8,
     backgroundColor: '#FFFFFF',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
   },
   title: {
     fontSize: 50,

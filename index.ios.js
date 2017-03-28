@@ -1,14 +1,32 @@
+/**
+ * Sample React Native App
+ * https://github.com/facebook/react-native
+ * @flow
+ */
+
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, ListView, Text, View, Navigator, Image, TouchableHighlight } from 'react-native';
+import {
+  AppRegistry,
+  StyleSheet,
+  ListView,
+  Text,
+  View,
+  Navigator,
+  Image,
+  TouchableHighlight,
+} from 'react-native';
 import Button from 'react-native-button';
+
+import AddItemView from './AppCode/iOS/AddItemView.js';
 import LoginPage from './AppCode/iOS/LoginPage.js';
-import HeaderMenu from './AppCode/iOS/HeaderMenu.js'
-import AddItemView from './AppCode/iOS/AddItemView.js'
+import HeaderMenu from './AppCode/iOS/HeaderMenu.js';
+
+
 import ItemsView from './AppCode/iOS/ItemsView.js';
+
+// import Main from './main'
 import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
 import * as firebase from 'firebase';
-//import {FBLogin, FBLoginManager} from 'react-native-facebook-login';
-
 
 //Initiaizing firebase
 const firebaseConfig = {
@@ -18,6 +36,7 @@ const firebaseConfig = {
 };
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
+//import {FBLogin, FBLoginManager} from 'react-native-facebook-login';
 
 
 var Bazaar = React.createClass({
@@ -75,13 +94,14 @@ class Main extends Component {
     })
   };
 
+
   render() {
       console.log('USER:',this.props.user);
     //If user is not registered
     return (
       <View style={styles.container}>
         <HeaderMenu user={this.state.user}/>
-        <LoginPage user={this.state.user} signIn={this._signIn.bind(this)} signOut={this._signOut.bind(this)}/>
+        <LoginPage user={this.state.user} signIn={this._signIn.bind(this)} signOut={this._signOut.bind(this)} firebaseApp={firebaseApp}/>
 
         <View style={styles.debugView}>
           <Button
@@ -92,6 +112,7 @@ class Main extends Component {
       </View>
     );
   }
+
   async _setupGoogleSignin() {
     try {
       await GoogleSignin.hasPlayServices({ autoResolve: true });
@@ -128,6 +149,7 @@ class Main extends Component {
     })
       .done();
   }
+
 };
 
 const styles = StyleSheet.create({
@@ -137,7 +159,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#FFFFFF'
+    backgroundColor: '#FFFFFF',
   },
   barMenu: {
     flex: 0.1,
@@ -149,11 +171,6 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
     flexDirection: 'row'
-  },
-  containerBarTitle: {
-    flex: 0.4,
-    justifyContent: 'center',
-    alignItems: 'center'
   },
   debugView: {
     flex: 0.1,

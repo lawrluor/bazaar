@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Image, Button, Text, TouchableHighlight} from 'react-native';
-import button from 'react-native-button';
+import {StyleSheet, View, Image, Text, TouchableHighlight} from 'react-native';
+
+
+import Button from 'react-native-button';
 
 
 class HeaderMenu extends Component{
@@ -36,7 +38,9 @@ class HeaderMenu extends Component{
             <Text style={styles.barTitle}>Bazaar</Text>
           </View>
           <View style={styles.containerImageTitle}>
-            <Image style={styles.profileImage} source={{ uri: this.props.user.photo }} />
+            <Button style={styles.styleButtonProfile} containerStyle={ styles.containerButtonProfile } >
+              <Image style={styles.profileImage} source={{ uri: this.props.user.photo }} />
+            </Button>
           </View>
         </View>
       );
@@ -55,8 +59,8 @@ const styles = StyleSheet.create({
     paddingTop:20,
     alignSelf: 'stretch',
     backgroundColor: '#C6492D',
-    borderBottomWidth: 3,
-    borderBottomColor: '#960819',
+    borderBottomWidth: 1,
+    borderBottomColor: '#DBDBDB',
     justifyContent: 'flex-start',
     alignItems: 'center',
     flexDirection: 'row'
@@ -80,6 +84,7 @@ const styles = StyleSheet.create({
   },
   logoTitle: {
     margin: 20,
+    marginTop:15,
     width: 50,
     height: 50,
   },
@@ -88,7 +93,7 @@ const styles = StyleSheet.create({
     height: 50,
     margin: 20,
     borderRadius: 25
-  },
+  }
 });
 
 
