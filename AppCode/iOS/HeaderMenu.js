@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
   //Change the background color to grey and make a header red
   barMenu: {
     flex: 0.08,
+    paddingTop:20,
     alignSelf: 'stretch',
     backgroundColor: '#C6492D',
     borderBottomWidth: 1,
@@ -73,7 +74,6 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontFamily: 'Futura',
     fontSize: 30,
-    marginTop: 10,
   },
   containerLogoTitle: {
     flex: 0.3,
@@ -84,16 +84,14 @@ const styles = StyleSheet.create({
   },
   logoTitle: {
     margin: 20,
-    marginTop:30,
-    width: 30,
-    height: 30,
+    marginTop:15,
+    width: 35,
+    height: 40,
   },
   profileBurger: {
-    width: 20,
-    height: 20,
-    marginTop: 35,
-    marginBottom:20,
-    marginRight: 10
+    width: 30,
+    height: 30,
+    margin: 20,
   }
 });
 
