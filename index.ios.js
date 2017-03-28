@@ -30,7 +30,7 @@ import * as firebase from 'firebase';
 
 //Initiaizing firebase
 const firebaseConfig = {
-   apiKey: "AIzaSyB4T2rvQweJNcYi-DPt30XWRuf1BXviFJA",
+  apiKey: "AIzaSyB4T2rvQweJNcYi-DPt30XWRuf1BXviFJA",
   authDomain: "bazaar-2f761.firebaseapp.com",
   databaseURL: "https://bazaar-2f761.firebaseio.com/",
 };
@@ -117,7 +117,7 @@ class Main extends Component {
     try {
       await GoogleSignin.hasPlayServices({ autoResolve: true });
       await GoogleSignin.configure({
-        iosClientId: '',
+        iosClientId: '581614335691-30hbflqfc3r5sfpn0l6t6csskk65he6n.apps.googleusercontent.com',
         offlineAccess: false
       });
 

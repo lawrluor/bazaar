@@ -21,11 +21,9 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
-			<key>CFBundleTypeRole</key>
-			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.581614335691-30hbflqfc3r5sfpn0l6t6csskk65he6n</string>
+				<string>fb203792870104501</string>
 			</array>
 		</dict>
 		<dict>
@@ -33,12 +31,23 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>org.reactjs.native.example.Bazaar</string>
+				<string>722603088219-9rf3vkglf4o0lr7ap4r9u21c12njtbhi.apps.googleusercontent.com	</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>203792870104501</string>
+	<key>FacebookDisplayName</key>
+	<string>Bazaar</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -68,27 +77,5 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
-  
-  <key>CFBundleURLTypes</key>
-  <array>
-    <dict>
-      <key>CFBundleURLSchemes</key>
-      <array>
-        <string>fb203792870104501</string>
-      </array>
-    </dict>
-  </array>
-  <key>FacebookAppID</key>
-  <string>203792870104501</string>
-  <key>FacebookDisplayName</key>
-  <string>Bazaar</string>
-  <key>LSApplicationQueriesSchemes</key>
-  <array>
-    <string>fbapi</string>
-    <string>fb-messenger-api</string>
-    <string>fbauth2</string>
-    <string>fbshareextension</string>
-  </array>
-  
 </dict>
 </plist>
