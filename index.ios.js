@@ -30,9 +30,9 @@ import * as firebase from 'firebase';
 
 //Initiaizing firebase
 const firebaseConfig = {
-  apiKey: "",
-  authDomain: "",
-  databaseURL: "",
+   apiKey: "AIzaSyB4T2rvQweJNcYi-DPt30XWRuf1BXviFJA",
+  authDomain: "bazaar-2f761.firebaseapp.com",
+  databaseURL: "https://bazaar-2f761.firebaseio.com/",
 };
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
