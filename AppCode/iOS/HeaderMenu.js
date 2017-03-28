@@ -39,7 +39,7 @@ class HeaderMenu extends Component{
           </View>
           <View style={styles.containerImageTitle}>
             <Button style={styles.styleButtonProfile} containerStyle={ styles.containerButtonProfile } >
-              <Image style={styles.profileImage} source={{ uri: this.props.user.photo }} />
+              <Image style={styles.profileBurger} source={require('../../img/burgerMenu.png')} />
             </Button>
           </View>
         </View>
@@ -56,7 +56,6 @@ const styles = StyleSheet.create({
   //Change the background color to grey and make a header red
   barMenu: {
     flex: 0.08,
-    paddingTop:20,
     alignSelf: 'stretch',
     backgroundColor: '#C6492D',
     borderBottomWidth: 1,
@@ -74,6 +73,7 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontFamily: 'Futura',
     fontSize: 30,
+    marginTop: 10,
   },
   containerLogoTitle: {
     flex: 0.3,
@@ -84,15 +84,16 @@ const styles = StyleSheet.create({
   },
   logoTitle: {
     margin: 20,
-    marginTop:15,
-    width: 50,
-    height: 50,
+    marginTop:30,
+    width: 30,
+    height: 30,
   },
-  profileImage: {
-    width: 50,
-    height: 50,
-    margin: 20,
-    borderRadius: 25
+  profileBurger: {
+    width: 20,
+    height: 20,
+    marginTop: 35,
+    marginBottom:20,
+    marginRight: 10
   }
 });
 

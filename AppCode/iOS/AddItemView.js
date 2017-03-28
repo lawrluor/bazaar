@@ -10,7 +10,8 @@ class AddItemView extends Component {
       itemPrice: '',
       itemQuantity: '',
       itemExpDate: '',
-      itemsRef: this.props.firebaseApp.database().ref()
+      itemsRef: this.props.firebaseApp.database().ref(),
+      itemPosition: 'unknown',
     };
   }
 
@@ -58,7 +59,7 @@ class AddItemView extends Component {
             title="Go to item view"
           />
           </View>
-    
+
       </View>
     );
   }
@@ -69,16 +70,28 @@ class AddItemView extends Component {
     })
   }
 
+  retrievePosition(){
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        var position = JSON.stringify(position);
+        this.setState({itemPosition: position});
+      },
+      (error) => alert(JSON.stringify(error)),
+      {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
+    );
+  }
+
   addItemFirebase() {
-    this.state.itemsRef.push({ name: this.state.itemName, price: this.state.itemPrice, quantity: this.state.itemQuantity, expDate: this.state.itemExpDate })
+    this.state.itemsRef.push({ name: this.state.itemName, price: this.state.itemPrice, quantity: this.state.itemQuantity, expDate: this.state.itemExpDate, location: this.state.itemPosition })
   }
 
   submitItem() {
     console.log("submit item")
+    this.retrievePosition();
     //Checking if the name, the price, the expiration date are correct
     if (this.nameCheck() && this.priceCheck() && this.quantityCheck() && this.expDateCheck()) {
       //Add all the database code to submit the item
-      this.addItemFirebase()
+      this.addItemFirebase();
     }
   }
 

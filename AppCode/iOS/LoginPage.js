@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {AppRegistry, StyleSheet, Text, View, Image, TouchableHighlight, ListView } from 'react-native';
+import {AppRegistry, StyleSheet, Text, View, Image, TouchableHighlight, ListView, ScrollView } from 'react-native';
 import Button from 'react-native-button';
 import ItemsRow from './ViewComponents/ItemsRow.js'
 
@@ -10,7 +10,7 @@ class LoginPage extends Component{
     this.state={
       itemsRef: this.props.firebaseApp.database().ref(),
       dataSource: ds.cloneWithRows([]),
-      itemsFirebase: []
+      itemsFirebase: [],
     }
   }
 
@@ -88,6 +88,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     justifyContent: 'center',
     alignItems: 'center',
+    overflow: 'scroll'
   },
   title: {
     fontSize: 50,
