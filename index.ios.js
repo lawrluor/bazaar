@@ -1,9 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- * @flow
- */
-
 import React, { Component } from 'react';
 import {
   AppRegistry,
@@ -20,9 +14,8 @@ import Button from 'react-native-button';
 import AddItemView from './AppCode/iOS/AddItemView.js';
 import LoginPage from './AppCode/iOS/LoginPage.js';
 import HeaderMenu from './AppCode/iOS/HeaderMenu.js';
-
-
 import ItemsView from './AppCode/iOS/ItemsView.js';
+import ItemsPage from './AppCode/iOS/ViewComponents/ItemsPage.js'
 
 // import Main from './main'
 import { GoogleSignin, GoogleSigninButton } from 'react-native-google-signin';
@@ -51,6 +44,9 @@ var Bazaar = React.createClass({
     }
     if (route.name == 'itemsView'){
       return <ItemsView navigator={navigator} firebaseApp={firebaseApp}/>
+    }
+    if (route.name == 'itemsPage'){
+      return <ItemsPage navigator={navigator} firebaseApp={firebaseApp}/>
     }
   },
   render() {
