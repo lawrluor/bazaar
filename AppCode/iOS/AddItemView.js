@@ -15,6 +15,10 @@ class AddItemView extends Component {
     };
   }
 
+  componentWillMount(){
+    this.retrievePosition();
+  }
+
   render() {
     return (
       <View style={{ flex: 10 }}>
@@ -73,7 +77,6 @@ class AddItemView extends Component {
   retrievePosition(){
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        var position = JSON.stringify(position);
         this.setState({itemPosition: position});
         console.log(position);
       },
@@ -83,7 +86,10 @@ class AddItemView extends Component {
   }
 
   addItemFirebase() {
-    this.state.itemsRef.push({ name: this.state.itemName, price: this.state.itemPrice, quantity: this.state.itemQuantity, expDate: this.state.itemExpDate, location: this.state.itemPosition })
+    console.log("location", this.state.itemPosition)
+    this.state.itemsRef.push({ name: this.state.itemName, price: this.state.itemPrice, quantity: this.state.itemQuantity,
+                               expDate: this.state.itemExpDate, latitude: this.state.itemPosition.coords.latitude,
+                              longitude: this.state.itemPosition.coords.longitude })
   }
 
   submitItem() {
@@ -92,8 +98,9 @@ class AddItemView extends Component {
     console.log("GETTING ITEM POSITION: " + this.state.itemPosition);
     //Checking if the name, the price, the expiration date are correct
     if (this.nameCheck() && this.priceCheck() && this.quantityCheck() && this.expDateCheck()) {
-      //Retrieve the location by GPS of the client
-      this.retrievePosition();
+    //Checking if the name, the price, the expiration date are correct
+    //Put it back when finish debugging
+    //if (this.nameCheck() && this.priceCheck() && this.quantityCheck() && this.expDateCheck()) {
       //Add all the database code to submit the item
       this.addItemFirebase();
     }

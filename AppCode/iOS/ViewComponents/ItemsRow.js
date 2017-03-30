@@ -10,16 +10,14 @@ class ItemsRow extends Component {
       price: this.props.price,
       quantity: this.props.quantity,
       expDate: this.props.expDate,
-      expanded: false
     }
   }
 
 
   render() {
     console.log(this.state.price)
-    if (!this.state.expanded) {
       return (
-        <TouchableHighlight onPress={() => this.expanding()}>
+        <TouchableHighlight onPress={() => this._navigate()}>
           <View style={styles.tile}>
             <View style={styles.priceView}>
               <Text style={styles.priceText}>
@@ -37,45 +35,12 @@ class ItemsRow extends Component {
           </View>
         </TouchableHighlight>
       )
-    }
-    else{
-      console.log("other view")
-      return (
-        <TouchableHighlight onPress={() => this.expanding()}>
-          <View style={{flex: 2}}>
-          <View style={styles.tile}>
-            <View style={styles.priceView}>
-              <Text style={styles.priceText}>
-                {this.state.price}
-              </Text>
-            </View>
-            <View style={styles.textView}>
-              <Text style={styles.nameText}>
-                {this.state.quantity + ' ' + this.state.name}
-              </Text>
-              <Text style={styles.expDateText}>
-                {this.state.expDate}
-              </Text>
-            </View>
-          </View>
-          <View style={{flex:1, backgroundColor:'blue'}}/>
-          </View>
-        </TouchableHighlight>
-      )
-    }
   }
 
-  expanding() {
-    if (this.state.expanded) {
-      this.setState({
-        expanded: false
-      })
-    }
-    else {
-      this.setState({
-        expanded: true
-      })
-    }
+  _navigate() {
+    this.props.navigator.push({
+      name: 'itemsPage',
+    })
   }
 }
 
