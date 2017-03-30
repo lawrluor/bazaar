@@ -75,6 +75,7 @@ class AddItemView extends Component {
       (position) => {
         var position = JSON.stringify(position);
         this.setState({itemPosition: position});
+        console.log(position);
       },
       (error) => alert(JSON.stringify(error)),
       {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
@@ -86,10 +87,13 @@ class AddItemView extends Component {
   }
 
   submitItem() {
-    console.log("submit item")
-    this.retrievePosition();
+    console.log("submit item");
+
+    console.log("GETTING ITEM POSITION: " + this.state.itemPosition);
     //Checking if the name, the price, the expiration date are correct
     if (this.nameCheck() && this.priceCheck() && this.quantityCheck() && this.expDateCheck()) {
+      //Retrieve the location by GPS of the client
+      this.retrievePosition();
       //Add all the database code to submit the item
       this.addItemFirebase();
     }
