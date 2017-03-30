@@ -89,7 +89,7 @@ class AddItemView extends Component {
     console.log("location", this.state.itemPosition)
     this.state.itemsRef.push({ name: this.state.itemName, price: this.state.itemPrice, quantity: this.state.itemQuantity,
                                expDate: this.state.itemExpDate, latitude: this.state.itemPosition.coords.latitude,
-                              longitude: this.state.itemPosition.coords.longitude })
+                               longitude: this.state.itemPosition.coords.longitude })
   }
 
   submitItem() {

@@ -13,7 +13,6 @@ class ItemsRow extends Component {
     }
   }
 
-
   render() {
     console.log(this.state.price)
       return (
