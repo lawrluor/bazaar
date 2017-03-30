@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Image, TouchableHighlight, Dimensions } from 'react-native';
 
-class ItemsRow extends Component {
+class ItemsPage extends Component {
 
   constructor(props) {
     super(props);
@@ -15,7 +15,7 @@ class ItemsRow extends Component {
     console.log(this.state.price)
       return (
         <View style={{flex: 10}}>
-          <View>
+          <View style={styles.itemView}>
 
           </View>  
         </View>  
@@ -27,7 +27,7 @@ class ItemsRow extends Component {
 const styles = StyleSheet.create({
   itemView: {
     flex: 5
-  }
+  },
   userView: {
     flex: 5
   }
