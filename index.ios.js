@@ -46,7 +46,7 @@ var Bazaar = React.createClass({
       return <ItemsView navigator={navigator} firebaseApp={firebaseApp}/>
     }
     if (route.name == 'itemsPage'){
-      return <ItemsPage navigator={navigator} firebaseApp={firebaseApp}/>
+      return <ItemsPage navigator={navigator} firebaseApp={firebaseApp} {...route.passProps}/>
     }
   },
   render() {

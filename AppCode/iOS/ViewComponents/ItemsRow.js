@@ -10,6 +10,7 @@ class ItemsRow extends Component {
       price: this.props.price,
       quantity: this.props.quantity,
       expDate: this.props.expDate,
+      _key: this.props._key
     }
   }
 
@@ -39,6 +40,9 @@ class ItemsRow extends Component {
   _navigate() {
     this.props.navigator.push({
       name: 'itemsPage',
+      passProps: {
+        _key: this.state._key
+      }
     })
   }
 }
