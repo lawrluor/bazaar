@@ -33,33 +33,83 @@ const firebaseApp = firebase.initializeApp(firebaseConfig);
 //import {FBLogin, FBLoginManager} from 'react-native-facebook-login';
 
 
-var Bazaar = React.createClass({
+export default class Bazaar extends Component {
 
-  renderScene(route, navigator) {
-    if (route.name == 'Main') {
-      return <Main navigator={navigator} />
-    }
-    //addItem route - debug only
-    if (route.name == 'addItem') {
-      return <AddItemView navigator={navigator} firebaseApp={firebaseApp}/>
-    }
-    if (route.name == 'itemsView'){
-      return <ItemsView navigator={navigator} firebaseApp={firebaseApp}/>
-    }
-    if (route.name == 'itemsPage'){
-      return <ItemsPage navigator={navigator} firebaseApp={firebaseApp} {...route.passProps}/>
-    }
-  },
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: null,
+      page: [true, false, false],
+    };
+  }
+
   render() {
     return (
       <Navigator
         style={{ flex: 1 }}
         initialRoute={{ name: 'Main' }}
-        renderScene={this.renderScene}
+        renderScene={this.renderScene.bind(this)}
       />
     )
   }
-});
+
+  renderScene(route, navigator) {
+    if (route.name == 'Main') {
+      return <Main navigator={navigator} _setupGoogleSignin={this._setupGoogleSignin.bind(this)} _signIn={this._signIn.bind(this)} _signOut={this._signOut.bind(this)} 
+                    user={this.state.user} firebaseApp={firebaseApp}/>
+    }
+    //addItem route - debug only
+    if (route.name == 'addItem') {
+      return <AddItemView navigator={navigator} firebaseApp={firebaseApp} user={this.state.user}/>
+    }
+    if (route.name == 'itemsView') {
+      return <ItemsView navigator={navigator} firebaseApp={firebaseApp} />
+    }
+    if (route.name == 'itemsPage') {
+      return <ItemsPage navigator={navigator} firebaseApp={firebaseApp} {...route.passProps} />
+    }
+  }
+
+  async _setupGoogleSignin() {
+    try {
+      await GoogleSignin.hasPlayServices({ autoResolve: true });
+      await GoogleSignin.configure({
+        iosClientId: '581614335691-30hbflqfc3r5sfpn0l6t6csskk65he6n.apps.googleusercontent.com',
+        offlineAccess: false
+      });
+
+      const user = await GoogleSignin.currentUserAsync();
+      console.log(user);
+      this.setState({ user });
+    }
+    catch (err) {
+      console.log("Google Signin error", err.code, err.message);
+    }
+  }
+
+  _signIn() {
+    GoogleSignin.signIn()
+      .then((user) => {
+        console.log(user);
+        this.setState({ user: user });
+      })
+      .catch((err) => {
+        console.log('WRONG SIGNIN', err);
+      })
+      .done();
+  }
+
+  _signOut() {
+    GoogleSignin.revokeAccess().then(() => GoogleSignin.signOut()).then(() => {
+      this.setState({ user: null });
+    })
+      .done();
+  }
+
+}
+
+AppRegistry.registerComponent('Bazaar', () => Bazaar);
+
 
 class Main extends Component {
   /**
@@ -74,7 +124,7 @@ class Main extends Component {
   }
 
   componentDidMount() {
-    this._setupGoogleSignin();
+    this.props._setupGoogleSignin();
   }
 
   _navigate(name) {
@@ -98,58 +148,16 @@ class Main extends Component {
     //If user is not registered
     return (
       <View style={styles.container}>
-        <HeaderMenu user={this.state.user}/>
-        <LoginPage user={this.state.user} signIn={this._signIn.bind(this)} page={this.state.page} signOut={this._signOut.bind(this)} firebaseApp={firebaseApp}/>
-        <NavigationBar user={this.state.user} page={this.state.page} navigateItem={this._navigateAddItem.bind(this)}/>
+        <HeaderMenu user={this.state.user} />
+        <LoginPage navigator={this.props.navigator} user={this.props.user} signIn={this.props._signIn} 
+                    page={this.state.page} signOut={this.props._signOut} firebaseApp={this.props.firebaseApp} />
+        <NavigationBar user={this.props.user} page={this.state.page} navigateItem={this._navigateAddItem.bind(this)} />
       </View>
     );
   }
 
 
-/*
-        <View style={styles.debugView}>
-          <Button
-            onPress={this._navigateAddItem.bind(this)}>
-            addItem view
-           </Button>
-        </View>
-*/
-  async _setupGoogleSignin() {
-    try {
-      await GoogleSignin.hasPlayServices({ autoResolve: true });
-      await GoogleSignin.configure({
-        iosClientId: '581614335691-30hbflqfc3r5sfpn0l6t6csskk65he6n.apps.googleusercontent.com',
-        offlineAccess: false
-      });
 
-      const user = await GoogleSignin.currentUserAsync();
-      console.log(user);
-      this.setState({ user });
-    }
-    catch (err) {
-      console.log("Google Signin error", err.code, err.message);
-    }
-
-  }
-
-  _signIn() {
-    GoogleSignin.signIn()
-      .then((user) => {
-        console.log(user);
-        this.setState({ user: user });
-      })
-      .catch((err) => {
-        console.log('WRONG SIGNIN', err);
-      })
-      .done();
-  }
-
-  _signOut() {
-    GoogleSignin.revokeAccess().then(() => GoogleSignin.signOut()).then(() => {
-      this.setState({ user: null });
-    })
-      .done();
-  }
 
 };
 
@@ -161,5 +169,3 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
   }
 });
-
-AppRegistry.registerComponent('Bazaar', () => Bazaar);

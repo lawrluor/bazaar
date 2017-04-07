@@ -12,29 +12,33 @@ class ItemsPage extends Component {
     }
   }
 
-  componentWillMount(){
+  componentWillMount() {
     this.getItem()
   }
 
   render() {
-      return (
-        <View style={{flex: 10, marginTop: 20}}>
-          <View style={styles.itemView}>
+    return (
+      <View style={{ flex: 10, marginTop: 20 }}>
+        <View style={styles.itemView}>
 
-          </View>
-          <View style={styles.userView}>
-
-          </View>
         </View>
-      )
+        <View style={styles.userView}>
+
+        </View>
+      </View>
+    )
   }
 
-  getItem(){
-    console.log("Debug", this.state.itemsRef.child(this.state._key))
+  getItem() {
+    this.props.firebaseApp.database().ref(this.state._key).once('value').then(function (snapshot) {
+      console.log("test", snapshot.val())
+      // ...
+    });
+  //  console.log("Debug", this.state.itemsRef.child(this.state._key).val())
     this.setState({
       item: this.state.itemsRef.child(this.state._key)
     },
-    console.log("test", this.state.item))
+      console.log("test", this.state.item))
   }
 }
 
