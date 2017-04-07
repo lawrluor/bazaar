@@ -49,7 +49,7 @@
 		<string>fbshareextension</string>
 	</array>
 	<key>LSRequiresIPhoneOS</key>
-	<true/>
+	<string>Need location always.</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSExceptionDomains</key>
@@ -61,8 +61,6 @@
 			</dict>
 		</dict>
 	</dict>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string></string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
@@ -73,6 +71,8 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>Needed to improve items</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

@@ -15,6 +15,7 @@ import AddItemView from './AppCode/iOS/AddItemView.js';
 import LoginPage from './AppCode/iOS/LoginPage.js';
 import HeaderMenu from './AppCode/iOS/HeaderMenu.js';
 import ItemsView from './AppCode/iOS/ItemsView.js';
+import NavigationBar from './AppCode/iOS/NavBar.js';
 import ItemsPage from './AppCode/iOS/ViewComponents/ItemsPage.js'
 
 // import Main from './main'
@@ -68,6 +69,7 @@ class Main extends Component {
     super(props);
     this.state = {
       user: null,
+      page: [true, false, false],
     };
   }
 
@@ -92,23 +94,26 @@ class Main extends Component {
 
 
   render() {
-      console.log('USER:',this.props.user);
+
     //If user is not registered
     return (
       <View style={styles.container}>
         <HeaderMenu user={this.state.user}/>
-        <LoginPage user={this.state.user} signIn={this._signIn.bind(this)} signOut={this._signOut.bind(this)} firebaseApp={firebaseApp}/>
+        <LoginPage user={this.state.user} signIn={this._signIn.bind(this)} page={this.state.page} signOut={this._signOut.bind(this)} firebaseApp={firebaseApp}/>
+        <NavigationBar user={this.state.user} page={this.state.page} navigateItem={this._navigateAddItem.bind(this)}/>
+      </View>
+    );
+  }
 
+
+/*
         <View style={styles.debugView}>
           <Button
             onPress={this._navigateAddItem.bind(this)}>
             addItem view
            </Button>
         </View>
-      </View>
-    );
-  }
-
+*/
   async _setupGoogleSignin() {
     try {
       await GoogleSignin.hasPlayServices({ autoResolve: true });
@@ -149,27 +154,11 @@ class Main extends Component {
 };
 
 const styles = StyleSheet.create({
-  //Change the background color to grey and make a header red
-
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#FFFFFF',
-  },
-  barMenu: {
-    flex: 0.1,
-    alignSelf: 'stretch',
-    backgroundColor: '#C6492D',
-    marginTop: 20,
-    borderBottomWidth: 3,
-    borderBottomColor: '#960819',
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    flexDirection: 'row'
-  },
-  debugView: {
-    flex: 0.1,
   }
 });
 

@@ -2,20 +2,35 @@ import React, {Component} from 'react';
 import {AppRegistry, StyleSheet, Text, View, Image, TouchableHighlight, ListView, ScrollView } from 'react-native';
 import Button from 'react-native-button';
 import ItemsRow from './ViewComponents/ItemsRow.js'
+import turf from '@turf/distance'
 
 class LoginPage extends Component{
   constructor(props){
     super(props);
-    const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2})
+    const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2});
     this.state={
       itemsRef: this.props.firebaseApp.database().ref(),
       dataSource: ds.cloneWithRows([]),
       itemsFirebase: [],
+      itemsSorted: [],
+      myLocation: null,
     }
   }
 
   componentWillMount(){
+    this.retrievePosition();
     this.listenForItems(this.state.itemsRef);
+  }
+
+  retrievePosition(){
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        console.log(JSON.stringify(position));
+        this.setState({myLocation: position});
+      },
+      (error) => alert(JSON.stringify(error)),
+      {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
+    );
   }
 
   render(){
@@ -27,7 +42,7 @@ class LoginPage extends Component{
               enableEmptySections={true}
               key={this.state.dataSource}
               dataSource={this.state.dataSource}
-              renderRow={(itemsFirebase) => <ItemsRow navigator={this.props.navigator} {...itemsFirebase} />}
+              renderRow={(itemsSorted) => <ItemsRow navigator={this.props.navigator} {...itemsSorted} />}
             />
             <Button style={styleButtonLogin.logoutStyle} containerStyle={styleButtonLogin.logoutButton} onPress={this.props.signOut}>
               Log out
@@ -54,6 +69,28 @@ class LoginPage extends Component{
 
   }
 
+  calculateDistance(latitude, longitude){
+
+    console.log("Object Latitude: " + latitude +" :: Object Longitude ::" + longitude );
+
+    var R = 6371; // km
+    var dLat = this.toRad(latitude-this.state.myLocation.coords.latitude);
+    var dLon = this.toRad(longitude-this.state.myLocation.coords.longitude);
+    var lat1 = this.toRad(this.state.myLocation.coords.latitude);
+    var lat2 = this.toRad(latitude);
+
+    var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
+     Math.sin(dLon/2) * Math.sin(dLon/2) * Math.cos(lat1) * Math.cos(lat2);
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+    var d = R * c;
+    console.log("MINE:" + this.state.myLocation.coords.latitude + this.state.myLocation.coords.longitude + "D: " + d);
+    return d * 0.621371; //Converting to miles
+  }
+
+  toRad(degrees){
+    return (degrees * Math.PI) / 180;
+  }
+
   listenForItems(itemsRef) {
 		itemsRef.on('value', (snap) => {
 			// get children as an array
@@ -64,21 +101,35 @@ class LoginPage extends Component{
 					price: child.val().price,
 					quantity: child.val().quantity,
 					expDate: child.val().expDate,
+          latitude: child.val().latitude,
+          longitude: child.val().longitude,
+          distance: this.calculateDistance(child.val().latitude, child.val().longitude),
 					_key: child.key
 				});
 			});
 
-			console.log("items", items)
+			console.log("items", items);
+
+      var listSorted = [];
+      listSorted = listSorted.sort((a,b) => {
+        if (a.distance < b.distance) {
+            return -1;
+          }
+          if (a.distance > b.distance) {
+            return 1;
+          }
+          // a must be equal to b
+          return 0;
+      });
 
 			this.setState({
 				dataSource: this.state.dataSource.cloneWithRows(items),
-				itemsFirebase: items
+				itemsFirebase: items,
+        itemsSorted: listSorted,
 			});
 
 		});
 	}
-
-
 }
 
 const styles = StyleSheet.create({

@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import {StyleSheet, View, Image, Text, TouchableHighlight} from 'react-native';
-
-
+import {StyleSheet, View, Image, Text} from 'react-native';
 import Button from 'react-native-button';
 
 
@@ -38,9 +36,6 @@ class HeaderMenu extends Component{
             <Text style={styles.barTitle}>Bazaar</Text>
           </View>
           <View style={styles.containerImageTitle}>
-            <Button style={styles.styleButtonProfile} containerStyle={ styles.containerButtonProfile } >
-              <Image style={styles.profileBurger} source={require('../../img/burgerMenu.png')} />
-            </Button>
           </View>
         </View>
       );
@@ -85,8 +80,8 @@ const styles = StyleSheet.create({
   logoTitle: {
     margin: 20,
     marginTop:15,
-    width: 35,
-    height: 40,
+    width: 50,
+    height: 50,
   },
   profileBurger: {
     width: 30,

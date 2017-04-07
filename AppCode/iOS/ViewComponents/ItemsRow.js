@@ -10,6 +10,7 @@ class ItemsRow extends Component {
       price: this.props.price,
       quantity: this.props.quantity,
       expDate: this.props.expDate,
+      distance: this.props.distance,
     }
   }
 
@@ -20,7 +21,7 @@ class ItemsRow extends Component {
           <View style={styles.tile}>
             <View style={styles.priceView}>
               <Text style={styles.priceText}>
-                {this.state.price}
+                {this.state.price}$
               </Text>
             </View>
             <View style={styles.textView}>
@@ -30,6 +31,10 @@ class ItemsRow extends Component {
               <Text style={styles.expDateText}>
                 {this.state.expDate}
               </Text>
+            </View>
+            <View>
+              <Text>Distance:</Text>
+              <Text>{this.state.distance} mi</Text>
             </View>
           </View>
         </TouchableHighlight>
