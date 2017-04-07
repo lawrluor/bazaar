@@ -11,6 +11,7 @@ class ItemsRow extends Component {
       quantity: this.props.quantity,
       expDate: this.props.expDate,
       distance: this.props.distance,
+      _key: this.props._key
     }
   }
 
@@ -44,6 +45,9 @@ class ItemsRow extends Component {
   _navigate() {
     this.props.navigator.push({
       name: 'itemsPage',
+      passProps: {
+        _key: this.state._key
+      }
     })
   }
 }
