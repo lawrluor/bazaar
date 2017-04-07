@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import {AppRegistry, StyleSheet, Text, View, Image, TouchableHighlight, ListView, ScrollView } from 'react-native';
 import Button from 'react-native-button';
 import ItemsRow from './ViewComponents/ItemsRow.js'
-import turf from '@turf/distance'
 
 class LoginPage extends Component{
   constructor(props){
