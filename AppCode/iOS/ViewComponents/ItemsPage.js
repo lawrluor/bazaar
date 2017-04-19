@@ -20,8 +20,14 @@ class ItemsPage extends Component {
     return (
       <View style={{ flex: 10, marginTop: 20 }}>
         <View style={styles.itemView}>
-
+          <View style={styles.itemImageContainer}>
+            <Image 
+              style={styles.itemImage}
+              source= {require('../../../img/VegetablesAndFruitsIcons/cabbage.png')}
+            />
+          </View>
         </View>
+        <View style={styles.separator}/>
         <View style={styles.userView}>
 
         </View>
@@ -45,13 +51,27 @@ class ItemsPage extends Component {
 const styles = StyleSheet.create({
   itemView: {
     flex: 5,
-    borderWidth: 2,
-    borderColor: "red"
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: 'center'
   },
+  itemImage: {
+    width: 50,
+    height: 50,
+    margin: 10
+  },
+  itemImageContainer: {
+    backgroundColor: "#fffbe6",
+    borderWidth: 1,
+    borderRadius: 25,
+    borderColor: 'grey'
+  },
+  separator: {
+		height: StyleSheet.hairlineWidth,
+		backgroundColor: '#DDDDDD',
+	},
   userView: {
     flex: 5,
-    borderWidth: 2,
-    borderColor: "green"
   }
 });
 

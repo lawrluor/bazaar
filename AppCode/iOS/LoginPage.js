@@ -106,7 +106,7 @@ class LoginPage extends Component {
           longitude: child.val().longitude,
           distance: this.calculateDistance(child.val().latitude, child.val().longitude),
           _key: child.key,
-          userId: this.props.user.id
+          //userId: this.props.user.id
         });
       });
 

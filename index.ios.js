@@ -47,7 +47,7 @@ export default class Bazaar extends Component {
     return (
       <Navigator
         style={{ flex: 1 }}
-        initialRoute={{ name: 'Main' }}
+        initialRoute={{ name: 'itemsView' }}
         renderScene={this.renderScene.bind(this)}
       />
     )
