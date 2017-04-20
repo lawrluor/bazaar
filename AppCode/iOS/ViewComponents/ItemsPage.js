@@ -111,9 +111,9 @@ class ItemsPage extends Component {
         return require('../../../img/VegetablesAndFruitsIcons/cabbage.png')
       case 'Salad':
         return require('../../../img/VegetablesAndFruitsIcons/cabbage.png')
-      case 'lettuce':
+      case 'letuce':
         return require('../../../img/VegetablesAndFruitsIcons/cabbage.png')
-      case 'Lettuce':
+      case 'Letuce':
         return require('../../../img/VegetablesAndFruitsIcons/cabbage.png')
       default:
         return require('../../../img/VegetablesAndFruitsIcons/salad.png')
