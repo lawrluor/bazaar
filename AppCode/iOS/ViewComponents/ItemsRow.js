@@ -17,36 +17,41 @@ class ItemsRow extends Component {
 
   render() {
     console.log(this.state.price)
-      return (
-        <TouchableHighlight onPress={() => this._navigate()}>
-          <View style={styles.tile}>
-            <View style={styles.priceView}>
-              <Text style={styles.priceText}>
-                {this.state.price}$
+    return (
+      <TouchableHighlight onPress={() => this._navigate()}>
+        <View style={styles.tile}>
+          <View style={styles.priceView}>
+            <Text style={styles.priceText}>
+              {this.state.price}$
               </Text>
-            </View>
-            <View style={styles.textView}>
-              <Text style={styles.nameText}>
-                {this.state.quantity + ' ' + this.state.name}
-              </Text>
-              <Text style={styles.expDateText}>
-                {this.state.expDate}
-              </Text>
-            </View>
-            <View>
-              <Text>Distance:</Text>
-              <Text>{this.state.distance} mi</Text>
-            </View>
           </View>
-        </TouchableHighlight>
-      )
+          <View style={styles.textView}>
+            <Text style={styles.nameText}>
+              {this.state.quantity + ' ' + this.state.name}
+            </Text>
+            <Text style={styles.expDateText}>
+              {this.state.expDate}
+            </Text>
+          </View>
+          <View>
+            <Text>Distance:</Text>
+            <Text>{this.state.distance} mi</Text>
+          </View>
+        </View>
+      </TouchableHighlight>
+    )
   }
 
   _navigate() {
     this.props.navigator.push({
       name: 'itemsPage',
       passProps: {
-        _key: this.state._key
+        name: this.props.name,
+        price: this.props.price,
+        quantity: this.props.quantity,
+        expDate: this.props.expDate,
+        distance: this.props.distance,
+        _key: this.props._key
       }
     })
   }
