@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { AppRegistry, StyleSheet, Text, View, Image, TextInput, Button, Alert, Dimensions } from 'react-native';
+import NavigationBar from './NavBar.js'
 
 class AddItemView extends Component {
 
@@ -12,8 +13,15 @@ class AddItemView extends Component {
       itemExpDate: '',
       itemsRef: this.props.firebaseApp.database().ref(),
       itemPosition: 'unknown',
+      pageLogin: [false, true, false],
     };
-  }
+  };
+
+  _navigateMain() {
+    this.props.navigator.push({
+      name: 'Main'
+    })
+  };
 
   componentWillMount(){
     this.retrievePosition();
@@ -57,16 +65,22 @@ class AddItemView extends Component {
             />
           </View>
           <View style={styles.separatorHorizontal}/>
-          <View style={styles.buttonView}>
-          <Button
-            onPress={() => this._navigate()}
-            title="Go to item view"
-          />
+          <View style={styles.navigatorBottom}>
+            <NavigationBar user={this.props.user} page={this.state.pageLogin} navigateMain={this._navigateMain.bind(this)} />
           </View>
 
       </View>
     );
   }
+
+  /*
+  <View style={styles.buttonView}>
+  <Button
+    onPress={() => this._navigate()}
+    title="Go to item view"
+  />
+  </View>
+  */
 
   _navigate() {
     this.props.navigator.push({
@@ -244,6 +258,9 @@ const styles = StyleSheet.create({
   },
   buttonView:{
     backgroundColor: 'white'
+  },
+  navigatorBottom:{
+    flex: 0.8,
   }
 });
 

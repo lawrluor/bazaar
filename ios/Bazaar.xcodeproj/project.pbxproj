@@ -797,7 +797,7 @@
 								enabled = 1;
 							};
 							com.apple.Keychain = {
-								enabled = 1;
+								enabled = 0;
 							};
 						};
 					};
@@ -1449,7 +1449,6 @@
 			baseConfigurationReference = 1CC89286D45D5A2E2E947ACC /* Pods-Bazaar.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Bazaar/Bazaar.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 5528P5FTGX;
@@ -1486,7 +1485,6 @@
 			baseConfigurationReference = 01D1724D2A56DBCA7697A4F3 /* Pods-Bazaar.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Bazaar/Bazaar.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5528P5FTGX;
 				FRAMEWORK_SEARCH_PATHS = (

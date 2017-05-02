@@ -45,7 +45,7 @@ class LoginButtons extends Component{
     try{
       await GoogleSignin.hasPlayServices({autoResolve: true});
       await GoogleSignin.configure({
-        iosClientId: '581614335691-30hbflqfc3r5sfpn0l6t6csskk65he6n.apps.googleusercontent.com',
+        iosClientId: '722603088219-9rf3vkglf4o0lr7ap4r9u21c12njtbhi.apps.googleusercontent.com',
         offlineAccess: false
       });
 

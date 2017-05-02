@@ -8,13 +8,11 @@ class NavigationBar extends Component{
     super(props);
   }
   render(){
-
-    console.log('PAGE' + this.props.page);
     if(this.props.user){
       return(
         <View style={styles.container}>
           <View style={styles.containerButton}>
-            <Button>
+            <Button  onPress={this.props.navigateMain}>
               <Image style={this.props.page[0] ? styles.iconsSubmenuSelected : styles.iconsSubmenu} source={require('../../img/home.png')}/>
             </Button>
           </View>

@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Text, View, Image, TouchableHighlight, ListView, ScrollView } from 'react-native';
+import { AppRegistry, StyleSheet, Text, TextInput, View, Image, TouchableOpacity, ListView, ScrollView } from 'react-native';
 import Button from 'react-native-button';
 import ItemsRow from './ViewComponents/ItemsRow.js'
 
-class LoginPage extends Component {
-  constructor(props) {
+class LoginPage extends Component{
+
+
+  constructor(props){
     super(props);
     const ds = new ListView.DataSource({ rowHasChanged: (r1, r2) => r1 !== r2 });
     this.state = {
@@ -13,6 +15,9 @@ class LoginPage extends Component {
       itemsFirebase: [],
       itemsSorted: [],
       myLocation: null,
+      email: '',
+      password: '',
+      loading: false,
     }
   }
 
@@ -21,7 +26,7 @@ class LoginPage extends Component {
     this.listenForItems(this.state.itemsRef);
   }
 
-  retrievePosition() {
+  retrievePosition(){
     navigator.geolocation.getCurrentPosition(
       (position) => {
         console.log(position);
@@ -30,6 +35,38 @@ class LoginPage extends Component {
       (error) => alert(JSON.stringify(error)),
       { enableHighAccuracy: true, timeout: 20000, maximumAge: 1000 }
     );
+  }
+
+  signUp() {
+    this.setState({
+      // When waiting for the firebase server show the loading indicator.
+      loading: true
+    });
+
+    // Make a call to firebase to create a new user.
+    this.props.firebaseApp.auth().createUserWithEmailAndPassword(
+      this.state.email,
+      this.state.password).then(() => {
+        // then and catch are methods that we call on the Promise returned from
+        // createUserWithEmailAndPassword
+        this.props.user = true;
+        alert('Your account was created!');
+        this.setState({
+          // Clear out the fields when the user logs in and hide the progress indicator.
+          email: '',
+          password: '',
+          loading: false
+        });
+        this.props.navigator.push({
+          name: "Main"
+        });
+    }).catch((error) => {
+      // Leave the fields filled when an error occurs and hide the progress indicator.
+      this.setState({
+        loading: false
+      });
+      alert("Account creation failed: " + error.message );
+    });
   }
 
   render() {
@@ -56,36 +93,58 @@ class LoginPage extends Component {
     if (!this.props.user) {
       return (
         <View style={styles.bodyContainer} >
-          <View>
+          <View style={styles.infoBazaar}>
             <Text style={styles.titleBazaar}>Bazaar</Text>
             <Text style={styles.otherTitle}>"Connect, Exchange, Eat"</Text>
           </View>
-          <Button style={styleButtonLogin.createStyle} containerStyle={styleButtonLogin.createButton} onPress={this.props.signIn}>
-            <Image style={styleButtonLogin.logoGoogle} source={require('../../img/logoGoogle.png')} />
-            SIGN IN WITH GOOGLE
-          </Button>
+
+          <View style={styles.signUpInfo}>
+            <TextInput placeholder="Email" style={styles.inputs} onChangeText={(text) => this.setState({email: text})}/>
+            <TextInput placeholder="Password" style={styles.inputs} secureTextEntry={true} onChangeText={(text) => this.setState({password: text})}/>
+            <TouchableOpacity onPress={this.signUp.bind(this)}>
+              <Text>Sign Up</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={this._navigateLogin.bind(this)}>
+              <Text>Log in</Text>
+            </TouchableOpacity>
+          </View>
+
         </View>
       );
     }
 
   }
 
+  _navigateLogin(){
+    this.props.navigator.push({
+      name: 'SignIn'
+    });
+  }
+
+  /*
+  <Button style={styleButtonLogin.createStyle} containerStyle={styleButtonLogin.createButton} onPress={this.props.signIn}>
+    <Image style={styleButtonLogin.logoGoogle} source={require('../../img/logoGoogle.png')} />
+    SIGN IN WITH GOOGLE
+  </Button>
+  */
+
   calculateDistance(latitude, longitude) {
+    if(this.state.myLocation != null){
+      var R = 6371; // km
+      var dLat = this.toRad(latitude - this.state.myLocation.coords.latitude);
+      var dLon = this.toRad(longitude - this.state.myLocation.coords.longitude);
+      var lat1 = this.toRad(this.state.myLocation.coords.latitude);
+      var lat2 = this.toRad(latitude);
 
-    console.log("Object Latitude: " + latitude + " :: Object Longitude ::" + longitude);
-
-    var R = 6371; // km
-    var dLat = this.toRad(latitude - this.state.myLocation.coords.latitude);
-    var dLon = this.toRad(longitude - this.state.myLocation.coords.longitude);
-    var lat1 = this.toRad(this.state.myLocation.coords.latitude);
-    var lat2 = this.toRad(latitude);
-
-    var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-      Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1) * Math.cos(lat2);
-    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    var d = R * c;
-    console.log("MINE:" + this.state.myLocation.coords.latitude + this.state.myLocation.coords.longitude + "D: " + d);
-    return d * 0.621371; //Converting to miles
+      var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+        Math.sin(dLon / 2) * Math.sin(dLon / 2) * Math.cos(lat1) * Math.cos(lat2);
+      var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+      var d = R * c;
+      return d * 0.621371; //Converting to miles
+    }else{
+      this.retrievePosition();
+    }
   }
 
   toRad(degrees) {
@@ -106,7 +165,7 @@ class LoginPage extends Component {
           longitude: child.val().longitude,
           distance: this.calculateDistance(child.val().latitude, child.val().longitude),
           _key: child.key,
-          userId: this.props.user.id
+          //userId: this.props.user.id
         });
       });
 
@@ -158,7 +217,33 @@ const styles = StyleSheet.create({
     fontSize: 60,
     fontFamily: 'Futura',
     textAlign: 'center'
-  }
+  },
+  signUpInfo: {
+    flex: 0.5,
+    justifyContent: 'center',
+    alignItems: 'center',
+    minWidth: 375,
+  },
+  infoBazaar: {
+    flex: 0.5,
+    justifyContent: 'center',
+    alignItems: 'center',
+    minWidth: 375,
+  },
+  emailInput: {
+    height: 40,
+  },
+  passwordInput: {
+    height: 40,
+  },
+  inputs: {
+    minHeight: 40,
+    backgroundColor: "#FFFFFF",
+    marginTop: 10,
+    marginBottom: 10,
+    padding: 10,
+    borderRadius: 4,
+  },
 });
 
 const styleButtonLogin = StyleSheet.create({
@@ -192,7 +277,7 @@ const styleButtonLogin = StyleSheet.create({
     paddingLeft: 0,
     height: 45,
     width: 45,
-  }
+  },
 
 });
 
